@@ -5,5 +5,10 @@
 
 
 define(['materialjs'], function() {
+
+    require("materialize");
+    require("./style.scss");
+
     console.log('Hello, Materializer!');
+
 });

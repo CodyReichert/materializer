@@ -1,6 +1,5 @@
 var webpack           = require('webpack');
 var path              = require('path');
-var commonsPlugin     = new webpack.optimize.CommonsChunkPlugin('commons', 'common.js');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
@@ -16,7 +15,7 @@ module.exports = {
         alias: {
             jquery: path.join(__dirname, "./node_modules/jquery"),
             materialjs: path.join(__dirname, "./node_modules/materialize-css/bin/materialize.js"),
-            materialize: path.join(__dirname, "./node_modules/materialize-css/sass/materialize.scss")
+            materialize: path.join(__dirname, "./node_modules/materialize-css/bin/materialize.css")
         }
     },
     resolveLoader: {
@@ -47,8 +46,7 @@ module.exports = {
         ]
     },
     plugins: [
-        commonsPlugin,
-        new ExtractTextPlugin('css/[name]-bundle.css'),
+        new ExtractTextPlugin('[name]-bundle.css'),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
