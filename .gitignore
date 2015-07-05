@@ -1,0 +1,10 @@
+scripts/dist/*
+
+node_modules
+Bundle.js
+Bundle.css
+*.woff*
+*.ttf
+*.svg
+*.eot
+*npm-debug.log
