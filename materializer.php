@@ -48,10 +48,8 @@ class MaterializerShortcodes {
         $title = $atts['title'];
         ob_start();
         ?>
-        <div class="row">
-            <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
+                <div class="card">
+                    <div class="card-content">
                         <span class="card-title"><?php echo $title; ?></span>
                         <p>
                             I am a very simple card. I am good at
@@ -65,8 +63,6 @@ class MaterializerShortcodes {
                         <a href="#">This is a link</a>
                     </div>
                 </div>
-            </div>
-        </div>
         <?php
         return ob_get_clean();
     }
