@@ -45,6 +45,12 @@ add_action('wp_enqueue_scripts', array('MaterializerBase', 'enqueueClientScripts
 /** Load Shortcodes **/
 require_once "shortcodes.php";
 
+/** Buttons */
+add_shortcode('btn', array('Buttons', 'raisedButton'));
+add_shortcode('btn_floating', array('Buttons', 'floatingButton'));
+add_shortcode('btn_fixed_action', array('Buttons', 'fixedActionButton'));
+add_shortcode('btn_flat', array('Buttons', 'flatButton'));
+add_shortcode('btn_large', array('Buttons', 'largeButton'));
 
 /** Cards */
 add_shortcode('card', array('Cards', 'basicCard'));
@@ -60,9 +66,5 @@ add_shortcode('collection', array('Collections', 'collection'));
 add_shortcode('collection_links', array('Collections', 'collectionLinks'));
 add_shortcode('collection_avatars', array('Collections', 'collectionAvatars'));
 
-/** Buttons */
-add_shortcode('btn', array('Buttons', 'raisedButton'));
-add_shortcode('btn_floating', array('Buttons', 'floatingButton'));
-add_shortcode('btn_fixed_action', array('Buttons', 'fixedActionButton'));
-add_shortcode('btn_flat', array('Buttons', 'flatButton'));
-add_shortcode('btn_large', array('Buttons', 'largeButton'));
+/** Dropdowns */
+add_shortcode('dropdown', array('Dropdowns', 'dropdown'));

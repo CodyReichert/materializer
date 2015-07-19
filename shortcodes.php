@@ -18,3 +18,4 @@ require_once "components/buttons.php";
 require_once "components/cards.php";
 require_once "components/collapsible.php";
 require_once "components/collections.php";
+require_once "components/dropdown.php";
