@@ -86,3 +86,6 @@ add_shortcode('pagination', array('Paginations', 'pagination'));
 add_shortcode('preloader_linear',   array('Preloaders', 'linearPreloader'));
 add_shortcode('preloader_circular', array('Preloaders', 'circularPreloader'));
 
+/** Side Navs */
+add_shortcode('sidenav',   array('SideNavs', 'sideNav'));
+
