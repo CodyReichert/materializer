@@ -72,4 +72,8 @@ add_shortcode('dropdown', array('Dropdowns', 'dropdown'));
 /** Footer */
 add_shortcode('footer', array('Footers', 'footer'));
 
+/** Footer */
+add_shortcode('img_responsive', array('Images', 'responsiveImage'));
+add_shortcode('img_circle', array('Images', 'circularImage'));
+
 
