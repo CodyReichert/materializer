@@ -52,6 +52,14 @@ add_shortcode('card_img', array('Cards', 'imageCard'));
 add_shortcode('card_reveal', array('Cards', 'revealCard'));
 add_shortcode('card_panel', array('Cards', 'panelCard'));
 
+/** Collapsibles */
+add_shortcode('collapsible', array('Collapsibles', 'collapsible'));
+
+/** Collections */
+add_shortcode('collection', array('Collections', 'collection'));
+add_shortcode('collection_links', array('Collections', 'collectionLinks'));
+add_shortcode('collection_avatars', array('Collections', 'collectionAvatars'));
+
 /** Buttons */
 add_shortcode('btn', array('Buttons', 'raisedButton'));
 add_shortcode('btn_floating', array('Buttons', 'floatingButton'));

@@ -16,3 +16,5 @@ class MaterializerShortcodes {
 
 require_once "components/buttons.php";
 require_once "components/cards.php";
+require_once "components/collapsible.php";
+require_once "components/collections.php";
