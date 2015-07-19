@@ -92,3 +92,5 @@ add_shortcode('sidenav',   array('SideNavs', 'sideNav'));
 /** Tables */
 add_shortcode('table',   array('Tables', 'basicTable'));
 
+/** Tabs */
+add_shortcode('tabs',   array('Tabs', 'tabsShortcode'));
