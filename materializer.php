@@ -15,10 +15,6 @@ $pluginName = "Materializer";
 $pluginVer = "0.1.0";
 
 
-add_action('wp_enqueue_scripts', array('MaterializerBase', 'enqueueClientStyles' ));
-add_action('wp_enqueue_scripts', array('MaterializerBase', 'enqueueClientScripts'));
-
-
 class MaterializerBase {
 
     public static function enqueueClientStyles() {
@@ -41,31 +37,15 @@ class MaterializerBase {
 
 }
 
+/** Enqueue Styles and Scripts **/
+add_action('wp_enqueue_scripts', array('MaterializerBase', 'enqueueClientStyles' ));
+add_action('wp_enqueue_scripts', array('MaterializerBase', 'enqueueClientScripts'));
 
-class MaterializerShortcodes {
 
-    public function basicCard( $atts ) {
-        $title = $atts['title'];
-        ob_start();
-        ?>
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title"><?php echo $title; ?></span>
-                        <p>
-                            I am a very simple card. I am good at
-                            containing small bits of information. I
-                            am convenient because I require little
-                            markup to use effectively.
-                        </p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">This is a link</a>
-                        <a href="#">This is a link</a>
-                    </div>
-                </div>
-        <?php
-        return ob_get_clean();
-    }
-}
+/** Load Shortcodes **/
+require_once "shortcodes.php";
 
-add_shortcode('m_card', array('MaterializerShortcodes', 'basicCard'));
+
+add_shortcode('m_card', array('Cards', 'basicCard'));
+add_shortcode('button', array('Buttons', 'raisedButton'));
+add_shortcode('floating_button', array('Buttons', 'floatingButton'));
