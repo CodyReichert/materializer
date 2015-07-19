@@ -14,6 +14,8 @@ Copyright (c) Cody Reichert - 2015
 $pluginName = "Materializer";
 $pluginVer = "0.1.0";
 
+/** Load Shortcodes **/
+require_once "shortcodes.php";
 
 class MaterializerBase {
 
@@ -41,9 +43,6 @@ class MaterializerBase {
 add_action('wp_enqueue_scripts', array('MaterializerBase', 'enqueueClientStyles' ));
 add_action('wp_enqueue_scripts', array('MaterializerBase', 'enqueueClientScripts'));
 
-
-/** Load Shortcodes **/
-require_once "shortcodes.php";
 
 /** Buttons */
 add_shortcode('btn',              array('Buttons', 'raisedButton'));
@@ -87,14 +86,14 @@ add_shortcode('preloader_linear',   array('Preloaders', 'linearPreloader'));
 add_shortcode('preloader_circular', array('Preloaders', 'circularPreloader'));
 
 /** Side Navs */
-add_shortcode('sidenav',   array('SideNavs', 'sideNav'));
+add_shortcode('sidenav', array('SideNavs', 'sideNav'));
 
 /** Tables */
-add_shortcode('table',   array('Tables', 'basicTable'));
+add_shortcode('table', array('Tables', 'basicTable'));
 
 /** Tabs */
-add_shortcode('tabs',   array('Tabs', 'tabsShortcode'));
+add_shortcode('tabs', array('Tabs', 'tabsShortcode'));
 
 /** Videos */
-add_shortcode('video',         array('Videos', 'externalVideo'));
-add_shortcode('video_html5',   array('Videos', 'localVideo'));
+add_shortcode('video',       array('Videos', 'externalVideo'));
+add_shortcode('video_html5', array('Videos', 'localVideo'));
