@@ -21,3 +21,5 @@ require_once "components/collections.php";
 require_once "components/dropdown.php";
 require_once "components/footer.php";
 require_once "components/images.php";
+require_once "components/navbar.php";
+require_once "components/pagination.php";

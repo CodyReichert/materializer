@@ -72,8 +72,14 @@ add_shortcode('dropdown', array('Dropdowns', 'dropdown'));
 /** Footer */
 add_shortcode('footer', array('Footers', 'footer'));
 
-/** Footer */
+/** Images */
 add_shortcode('img_responsive', array('Images', 'responsiveImage'));
 add_shortcode('img_circle', array('Images', 'circularImage'));
+
+/** Navbar */
+add_shortcode('navbar', array('Navigation', 'navbar'));
+
+/** Pagination */
+add_shortcode('pagination', array('Paginations', 'pagination'));
 
 
