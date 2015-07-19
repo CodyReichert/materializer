@@ -46,7 +46,13 @@ add_action('wp_enqueue_scripts', array('MaterializerBase', 'enqueueClientScripts
 require_once "shortcodes.php";
 
 
+/** Cards */
 add_shortcode('card', array('Cards', 'basicCard'));
+add_shortcode('card_img', array('Cards', 'imageCard'));
+add_shortcode('card_reveal', array('Cards', 'revealCard'));
+add_shortcode('card_panel', array('Cards', 'panelCard'));
+
+/** Buttons */
 add_shortcode('btn', array('Buttons', 'raisedButton'));
 add_shortcode('btn_floating', array('Buttons', 'floatingButton'));
 add_shortcode('btn_fixed_action', array('Buttons', 'fixedActionButton'));
