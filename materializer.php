@@ -94,3 +94,7 @@ add_shortcode('table',   array('Tables', 'basicTable'));
 
 /** Tabs */
 add_shortcode('tabs',   array('Tabs', 'tabsShortcode'));
+
+/** Videos */
+add_shortcode('video',         array('Videos', 'externalVideo'));
+add_shortcode('video_html5',   array('Videos', 'localVideo'));

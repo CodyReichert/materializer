@@ -15,7 +15,7 @@ class Dropdowns extends MaterializerShortcodes {
      * @textColor:   text color
      */
     public function dropdown( $atts ) {
-        $title = $atts['title'];
+        $title = empty($atts['title']) ? '' : $atts['title'];
         ob_start();
         ?>
             <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>

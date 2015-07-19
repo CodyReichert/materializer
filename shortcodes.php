@@ -27,3 +27,4 @@ require_once "components/preloader.php";
 require_once "components/sidenav.php";
 require_once "components/tables.php";
 require_once "components/tabs.php";
+require_once "components/videos.php";

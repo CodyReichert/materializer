@@ -33,7 +33,8 @@ class Preloaders extends MaterializerShortcodes {
      * @flashing:    change through all the colors
      */
     public function circularPreloader($atts) {
-        if(!$atts['flashing']) {
+
+        if(empty($atts['flashing'])) {
             ob_start();
             ?>
                 <div class="preloader-wrapper big active">
