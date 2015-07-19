@@ -25,3 +25,4 @@ require_once "components/navbar.php";
 require_once "components/pagination.php";
 require_once "components/preloader.php";
 require_once "components/sidenav.php";
+require_once "components/tables.php";

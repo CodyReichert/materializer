@@ -89,3 +89,6 @@ add_shortcode('preloader_circular', array('Preloaders', 'circularPreloader'));
 /** Side Navs */
 add_shortcode('sidenav',   array('SideNavs', 'sideNav'));
 
+/** Tables */
+add_shortcode('table',   array('Tables', 'basicTable'));
+
