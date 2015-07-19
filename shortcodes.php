@@ -23,3 +23,4 @@ require_once "components/footer.php";
 require_once "components/images.php";
 require_once "components/navbar.php";
 require_once "components/pagination.php";
+require_once "components/preloader.php";

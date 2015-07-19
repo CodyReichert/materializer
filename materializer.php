@@ -74,7 +74,7 @@ add_shortcode('footer', array('Footers', 'footer'));
 
 /** Images */
 add_shortcode('img_responsive', array('Images', 'responsiveImage'));
-add_shortcode('img_circle', array('Images', 'circularImage'));
+add_shortcode('img_circle',     array('Images', 'circularImage'));
 
 /** Navbar */
 add_shortcode('navbar', array('Navigation', 'navbar'));
@@ -82,4 +82,7 @@ add_shortcode('navbar', array('Navigation', 'navbar'));
 /** Pagination */
 add_shortcode('pagination', array('Paginations', 'pagination'));
 
+/** Preloaders */
+add_shortcode('preloader_linear',   array('Preloaders', 'linearPreloader'));
+add_shortcode('preloader_circular', array('Preloaders', 'circularPreloader'));
 
