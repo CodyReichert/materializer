@@ -18,10 +18,16 @@ class Buttons extends MaterializerShortcodes {
      * @disabled:  disabled (default false)
      */
     public function raisedButton($atts, $content) {
+        $to    = !empty($atts['to'])    ? $atts['to']    : '#';
+        $color = !empty($atts['color']) ? $atts['color'] : '';
+        $text  = !empty($atts['text'])  ? $atts['text']  : '';
+
+        $class = $color . " " . $text . "-text";
+
         ob_start();
         ?>
-            <a href="#" class="waves-effect waves-light btn">
-                Button
+            <a href="<?php echo $to; ?>" class="waves-effect waves-light btn <?php echo $class; ?>">
+                <?php echo do_shortcode($content); ?>
             </a>
         <?php
         return ob_get_clean();
@@ -38,10 +44,17 @@ class Buttons extends MaterializerShortcodes {
      * @disabled:  disabled (default false)
      */
     public function floatingButton($atts, $content) {
+        $to    = !empty($atts['to'])    ? $atts['to']    : '#';
+        $color = !empty($atts['color']) ? $atts['color'] : '';
+        $text  = !empty($atts['text'])  ? $atts['text']  : '';
+
+        $class = $color . " " . $text . "-text";
+
         ob_start();
         ?>
-            <a href="#" class="btn-floating btn-large waves-effect waves-light red">
-               <i class="material-icons">add</i>
+            <a href="<?php echo $to; ?>" class="waves-effect waves-light btn-floating btn-large
+                                                <?php echo $class; ?>">
+                <?php echo do_shortcode($content); ?>
             </a>
         <?php
         return ob_get_clean();
@@ -57,19 +70,51 @@ class Buttons extends MaterializerShortcodes {
      * @disabled:  disabled (default false)
      */
     public function fixedActionButton($atts, $content) {
+        $color = !empty($atts['color']) ? $atts['color'] : '';
+        $text  = !empty($atts['text'])  ? $atts['text']  : '';
+
+        $class = $color . " " . $text . "-text";
+
+        $links = parent::get_stripped_shortcodes($content, 'action');
+        $stripped_content = parent::strip_shortcode($content, 'action');
+        $action_links = $links[0];
+
         ob_start();
         ?>
         <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
           <a class="btn-floating btn-large red">
             <i class="large material-icons">mode_edit</i>
           </a>
-          <ul>
-            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></i></a></li>
-            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-          </ul>
+          <?php if($action_links !== NULL) { ?>
+              <ul>
+                  <?php
+                  foreach($action_links as $link) {
+                      echo '<li>';
+                      echo do_shortcode($link);
+                      echo '</li>';
+                  }
+                  ?>
+              </ul>
+          <?php } ?>
         </div>
+        <?php
+        return ob_get_clean();
+    }
+
+    function fixedActionButtonAction($atts, $content) {
+        $to =   isset($atts['to'])   ? $atts['to']   : '';
+        $text = isset($atts['text']) ? $atts['text'] : '';
+        $color = isset($atts['color']) ? $atts['color'] : '';
+
+        $class = $color . " " . $text . "-text";
+
+        ob_start();
+        ?>
+            <a class="btn-floating <?php echo $class; ?>" href="<?php echo $to; ?>">
+                <span class="material-icons">
+                    <?php echo $content ?>
+                </span>
+            </a>
         <?php
         return ob_get_clean();
     }
@@ -84,10 +129,16 @@ class Buttons extends MaterializerShortcodes {
      * @disabled:  disabled (default false)
      */
     public function flatButton($atts, $content) {
+        $to    = !empty($atts['to'])    ? $atts['to']    : '#';
+        $color = !empty($atts['color']) ? $atts['color'] : '';
+        $text  = !empty($atts['text'])  ? $atts['text']  : '';
+
+        $class = $color . " " . $text . "-text";
+
         ob_start();
         ?>
-            <a href="#" class="waves-effect waves-light btn-flat">
-                Button
+            <a href="<?php echo $to; ?>" class="waves-effect waves-light btn-flat <?php echo $class; ?>">
+                <?php echo do_shortcode($content); ?>
             </a>
         <?php
         return ob_get_clean();
@@ -103,10 +154,16 @@ class Buttons extends MaterializerShortcodes {
      * @disabled:  disabled (default false)
      */
     public function largeButton($atts, $content) {
+        $to    = !empty($atts['to'])    ? $atts['to']    : '#';
+        $color = !empty($atts['color']) ? $atts['color'] : '';
+        $text  = !empty($atts['text'])  ? $atts['text']  : '';
+
+        $class = $color . " " . $text . "-text";
+
         ob_start();
         ?>
-            <a href="#" class="waves-effect waves-light btn-large">
-                Button
+            <a href="<?php echo $to; ?>" class="waves-effect waves-light btn-large <?php echo $class; ?>">
+                <?php echo do_shortcode($content); ?>
             </a>
         <?php
         return ob_get_clean();
