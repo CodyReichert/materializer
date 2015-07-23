@@ -11,10 +11,11 @@ class Cards extends MaterializerShortcodes {
     /**
      * Basic Card [card]
      * Available Attributes:
-     * @color:       background color
-     * @text:        text color
-     * @title_color: text color of the tile
-     * @size:        small/medium/large
+     * @title:       Title of the card
+     * @color:       Background color
+     * @text:        Text color
+     * @size:        Small/medium/large
+     * @title_color: Text color of the tile
      */
     public function basicCard($atts, $content) {
         $title =      isset($atts['title'])       ? $atts['title']       : '';
@@ -29,25 +30,25 @@ class Cards extends MaterializerShortcodes {
 
         ob_start();
         ?>
-                <div class="card <?php echo $color . " " . $text . "-text" ; ?>">
-                    <div class="card-content">
-                        <span class="card-title <?php echo $titleColor . "-text" ?>">
-                            <?php echo $title; ?>
-                        </span>
-                        <p>
-                            <?php echo do_shortcode($stripped_content); ?>
-                        </p>
-                    </div>
-                    <?php if($action_links !== NULL) { ?>
-                        <div class="card-action">
-                            <?php
-                                  foreach($action_links as $link) {
-                                      echo do_shortcode($link);
-                                  }
-                            ?>
-                        </div>
-                    <?php } ?>
+            <div class="card <?php echo $color . " " . $text . "-text" ; ?>">
+                <div class="card-content">
+                    <span class="card-title <?php echo $titleColor . "-text" ?>">
+                        <?php echo $title; ?>
+                    </span>
+                    <p>
+                        <?php echo do_shortcode($stripped_content); ?>
+                    </p>
                 </div>
+                <?php if($action_links !== NULL) { ?>
+                    <div class="card-action">
+                        <?php
+                              foreach($action_links as $link) {
+                                  echo do_shortcode($link);
+                              }
+                        ?>
+                    </div>
+                <?php } ?>
+            </div>
         <?php
         return ob_get_clean();
     }
@@ -64,6 +65,18 @@ class Cards extends MaterializerShortcodes {
         return ob_get_clean();
     }
 
+    public function cardRevealOpenContent($atts, $content) {
+        $text = isset($atts['text']) ? $atts['text'] : '';
+
+        ob_start();
+        ?>
+            <p class="<?php echo $text . "-text"; ?>">
+                <?php echo do_shortcode($content); ?>
+            </p>
+        <?php
+        return ob_get_clean();
+    }
+
     /**
      * Image Card [card_img]
      * Available Attributes:
@@ -74,23 +87,35 @@ class Cards extends MaterializerShortcodes {
      * @size:        small/medium/large
      */
     public function imageCard($atts, $content) {
+        $img =   isset($atts['img'])   ? $atts['img']   : '';
+        $color = isset($atts['color']) ? $atts['color'] : '';
+        $text =  isset($atts['text'])  ? $atts['text']  : '';
+
+        $links = parent::get_stripped_shortcodes($content, 'link');
+        $stripped_content = parent::strip_shortcode($content, 'link');
+
+        $action_links = $links[0];
+
         ob_start();
         ?>
-          <div class="card">
+          <div class="card <?php echo $color . " " . $text . "-text" ; ?>">
               <div class="card-image">
-                  <img src="https://simplyrets.com/images/scrot1.png">
+                  <img src="<?php echo $img; ?>">
               </div>
               <div class="card-content">
                   <p>
-                      I am a very simple card. I am good at containing
-                      small bits of information.  I am convenient
-                      because I require little markup to use
-                      effectively.
+                      <?php echo do_shortcode($stripped_content); ?>
                   </p>
               </div>
-              <div class="card-action">
-                  <a href="#">This is a link</a>
-              </div>
+              <?php if($action_links !== NULL) { ?>
+                  <div class="card-action">
+                      <?php
+                          foreach($action_links as $link) {
+                              echo do_shortcode($link);
+                          }
+                      ?>
+                  </div>
+              <?php } ?>
           </div>
         <?php
         return ob_get_clean();
@@ -106,27 +131,38 @@ class Cards extends MaterializerShortcodes {
      * @size:        small/medium/large
      */
     public function revealCard($atts, $content) {
+        $title =      isset($atts['title'])       ? $atts['title']       : '';
+        $color =      isset($atts['color'])       ? $atts['color']       : '';
+        $text =       isset($atts['text'])        ? $atts['text']        : '';
+        $img =        isset($atts['img'])         ? $atts['img']         : '';
+        $titleColor = isset($atts['title_color']) ? $atts['title_color'] : '';
+        $more_icon =  isset($atts['more_icon'])   ? $atts['more_icon']   : '^';
+        $less_icon =  isset($atts['less_icon'])   ? $atts['less_icon']   : 'X';
+
+        $open_content = parent::get_stripped_shortcodes($content, 'card_open');
+        $stripped_content = parent::strip_shortcode($content, 'card_open');
+
         ob_start();
         ?>
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img src="https://simplyrets.com/images/scrot1.png">
+                    <img class="activator" src="https://simplyrets.com/images/scrot1.png">
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">
-                        Card Title
-                        <i class="material-icons right">more_vert</i>
+                        <?php echo $title; ?>
+                        <i class="right"><?php echo $more_icon; ?></i>
                     </span>
-                    <p><a href="#">This is a link</a></p>
+                    <p>
+                        <?php echo do_shortcode($stripped_content); ?>
+                    </p>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">
-                        Card Title
-                        <i class="material-icons right">close</i>
+                        <?php echo $title; ?>
+                        <i class="right"><?php echo $less_icon; ?></i>
                     </span>
-                    <p>
-                        Here is some more information about this product that is only revealed once clicked on.
-                    </p>
+                    <?php echo do_shortcode($open_content[0][0]); ?>
               </div>
             </div>
 

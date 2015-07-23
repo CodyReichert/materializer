@@ -17,7 +17,7 @@ class MaterializerShortcodes {
      * and return them as an array.
      */
     public function get_stripped_shortcodes($content, $tag) {
-        $pattern = get_shortcode_regex();
+        $pattern = MaterializerShortcodes::single_shortcode_regexp($tag);
         $matches = array();
 
         if(!has_shortcode($content, $tag)) {
@@ -34,11 +34,11 @@ class MaterializerShortcodes {
      * the content with only shortcodes matchin $tag removed.
      */
     public function strip_shortcode($content, $tag) {
-        if ( false === strpos( $content, "$tag" ) ) {
+        if(false === strpos($content, $tag)) {
             return $content;
         }
         $pattern = MaterializerShortcodes::single_shortcode_regexp($tag);
-        return preg_replace_callback( "/$pattern/s", 'strip_shortcode_tag', $content );
+        return preg_replace_callback("/$pattern/s", 'strip_shortcode_tag', $content);
     }
 
 
