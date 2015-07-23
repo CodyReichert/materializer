@@ -12,19 +12,69 @@ class MaterializerShortcodes {
         return $color;
     }
 
-}
+    /**
+     * Parse $content for shortcodes matching $tag, collect them
+     * and return them as an array.
+     */
+    public function get_stripped_shortcodes($content, $tag) {
+        $pattern = get_shortcode_regex();
+        $matches = array();
 
-require_once "components/buttons.php";
-require_once "components/cards.php";
-require_once "components/collapsible.php";
-require_once "components/collections.php";
-require_once "components/dropdown.php";
-require_once "components/footer.php";
-require_once "components/images.php";
-require_once "components/navbar.php";
-require_once "components/pagination.php";
-require_once "components/preloader.php";
-require_once "components/sidenav.php";
-require_once "components/tables.php";
-require_once "components/tabs.php";
-require_once "components/videos.php";
+        if(!has_shortcode($content, $tag)) {
+            return false;
+        }
+
+        preg_match_all("/$pattern/s", $content, $matches);
+
+        return $matches; 
+    }
+
+    /**
+     * Parse $content and strip all $tag shortcodes, returning
+     * the content with only shortcodes matchin $tag removed.
+     */
+    public function strip_shortcode($content, $tag) {
+        if ( false === strpos( $content, "$tag" ) ) {
+            return $content;
+        }
+        $pattern = MaterializerShortcodes::single_shortcode_regexp($tag);
+        return preg_replace_callback( "/$pattern/s", 'strip_shortcode_tag', $content );
+    }
+
+
+    /**
+     * Given $tag, return a regexp to match shortcodes with name $tag.
+     */
+    public function single_shortcode_regexp($tag) {
+        return
+                '\\['
+              . '(\\[?)'
+              . "($tag)"
+              . '(?![\\w-])'
+              . '('
+              .     '[^\\]\\/]*'
+              .     '(?:'
+              .         '\\/(?!\\])'
+              .         '[^\\]\\/]*'
+              .     ')*?'
+              . ')'
+              . '(?:'
+              .     '(\\/)'
+              .     '\\]'
+              . '|'
+              .     '\\]'
+              .     '(?:'
+              .         '('
+              .             '[^\\[]*+'
+              .             '(?:'
+              .                 '\\[(?!\\/\\2\\])'
+              .                 '[^\\[]*+'
+              .             ')*+'
+              .         ')'
+              .         '\\[\\/\\2\\]'
+              .     ')?'
+              . ')'
+              . '(\\]?)';
+    }
+
+}

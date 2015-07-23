@@ -16,6 +16,20 @@ $pluginVer = "0.1.0";
 
 /** Load Shortcodes **/
 require_once "shortcodes.php";
+require_once "components/buttons.php";
+require_once "components/cards.php";
+require_once "components/collapsible.php";
+require_once "components/collections.php";
+require_once "components/dropdown.php";
+require_once "components/footer.php";
+require_once "components/images.php";
+require_once "components/navbar.php";
+require_once "components/pagination.php";
+require_once "components/preloader.php";
+require_once "components/sidenav.php";
+require_once "components/tables.php";
+require_once "components/tabs.php";
+require_once "components/videos.php";
 
 class MaterializerBase {
 
@@ -56,6 +70,7 @@ add_shortcode('card',        array('Cards', 'basicCard'));
 add_shortcode('card_img',    array('Cards', 'imageCard'));
 add_shortcode('card_reveal', array('Cards', 'revealCard'));
 add_shortcode('card_panel',  array('Cards', 'panelCard'));
+add_shortcode('link',        array('Cards', 'actionLink'));
 
 /** Collapsibles */
 add_shortcode('collapsible', array('Collapsibles', 'collapsible'));

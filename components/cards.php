@@ -11,30 +11,55 @@ class Cards extends MaterializerShortcodes {
     /**
      * Basic Card [card]
      * Available Attributes:
-     * @actionLink:  Card action links
      * @color:       background color
-     * @textColor:   text color
+     * @text:        text color
+     * @title_color: text color of the tile
      * @size:        small/medium/large
      */
-    public function basicCard( $atts ) {
-        $title = $atts['title'];
+    public function basicCard($atts, $content) {
+        $title =      isset($atts['title'])       ? $atts['title']       : '';
+        $color =      isset($atts['color'])       ? $atts['color']       : '';
+        $text =       isset($atts['text'])        ? $atts['text']        : '';
+        $titleColor = isset($atts['title_color']) ? $atts['title_color'] : '';
+
+        $links = parent::get_stripped_shortcodes($content, 'link');
+        $stripped_content = parent::strip_shortcode($content, 'link');
+
+        $action_links = $links[0];
+
         ob_start();
         ?>
-                <div class="card">
+                <div class="card <?php echo $color . " " . $text . "-text" ; ?>">
                     <div class="card-content">
-                        <span class="card-title"><?php echo $title; ?></span>
+                        <span class="card-title <?php echo $titleColor . "-text" ?>">
+                            <?php echo $title; ?>
+                        </span>
                         <p>
-                            I am a very simple card. I am good at
-                            containing small bits of information. I
-                            am convenient because I require little
-                            markup to use effectively.
+                            <?php echo do_shortcode($stripped_content); ?>
                         </p>
                     </div>
-                    <div class="card-action">
-                        <a href="#">This is a link</a>
-                        <a href="#">This is a link</a>
-                    </div>
+                    <?php if($action_links !== NULL) { ?>
+                        <div class="card-action">
+                            <?php
+                                  foreach($action_links as $link) {
+                                      echo do_shortcode($link);
+                                  }
+                            ?>
+                        </div>
+                    <?php } ?>
                 </div>
+        <?php
+        return ob_get_clean();
+    }
+
+    public function actionLink($atts, $content) {
+        $to =   isset($atts['to'])   ? $atts['to']   : '';
+        $text = isset($atts['text']) ? $atts['text'] : '';
+        ob_start();
+        ?>
+            <a class="<?php echo $text . "-text"; ?>" href="<?php echo $to ; ?>">
+                <?php echo $content ?>
+            </a>
         <?php
         return ob_get_clean();
     }
@@ -54,11 +79,13 @@ class Cards extends MaterializerShortcodes {
           <div class="card">
               <div class="card-image">
                   <img src="https://simplyrets.com/images/scrot1.png">
-                  <span class="card-title">Title</span>
               </div>
               <div class="card-content">
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                     I am convenient because I require little markup to use effectively.
+                  <p>
+                      I am a very simple card. I am good at containing
+                      small bits of information.  I am convenient
+                      because I require little markup to use
+                      effectively.
                   </p>
               </div>
               <div class="card-action">
