@@ -69,7 +69,6 @@ add_shortcode('btn_large',        array('Buttons', 'largeButton'));
 add_shortcode('card',        array('Cards', 'basicCard'));
 add_shortcode('card_img',    array('Cards', 'imageCard'));
 add_shortcode('card_reveal', array('Cards', 'revealCard'));
-add_shortcode('card_panel',  array('Cards', 'panelCard'));
 add_shortcode('link',        array('Cards', 'actionLink'));
 add_shortcode('card_open',   array('Cards', 'cardRevealOpenContent'));
 
