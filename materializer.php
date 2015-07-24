@@ -74,12 +74,13 @@ add_shortcode('link',        array('Cards', 'actionLink'));
 add_shortcode('card_open',   array('Cards', 'cardRevealOpenContent'));
 
 /** Collapsibles */
-add_shortcode('collapsible', array('Collapsibles', 'collapsible'));
+add_shortcode('collapsible',      array('Collapsibles', 'collapsible'));
 add_shortcode('collapsible_item', array('Collapsibles', 'collapsibleItem'));
 
 /** Collections */
 add_shortcode('collection',         array('Collections', 'collection'));
-add_shortcode('collection_links',   array('Collections', 'collectionLinks'));
+add_shortcode('collection_item',    array('Collections', 'collectionItem'));
+add_shortcode('collection_link',   array('Collections', 'collectionLink'));
 add_shortcode('collection_avatars', array('Collections', 'collectionAvatars'));
 
 /** Dropdowns */
