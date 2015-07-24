@@ -18,23 +18,50 @@ class Collapsibles extends MaterializerShortcodes {
      * @preselected: a preselected option
      */
     public function collapsible($atts, $content) {
+        $color = !empty($atts['color']) ? $atts['color'] : '';
+        $text  = !empty($atts['text'])  ? $atts['text']  : '';
+        $type  = !empty($atts['type'])  ? $atts['type']  : 'expandable';
+        $style = !empty($atts['style']) ? $atts['style'] : '';
+
+        $class = $style . " " . $color . " " . $text . "-text";
+
+        $items = parent::get_stripped_shortcodes($content, 'collapsible_item');
+        $stripped_content = parent::strip_shortcode($content, 'collapsible_item');
+
+        $collapsible_items = $items[0];
+
         ob_start();
         ?>
-            <ul class="collapsible popout" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header">First</div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Second</div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Third</div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
+            <ul class="collapsible <?php echo $class; ?>" data-collapsible="<?php echo $type; ?>">
+                <?php if(!empty($collapsible_items)) { ?>
+                    <?php foreach($collapsible_items as $item) { ?>
+                        <li>
+                            <?php echo do_shortcode($item); ?>
+                        </li>
+                    <?php } ?>
+                <?php } ?>
             </ul>
         <?php
         return ob_get_clean();
     }
+
+    public function collapsibleItem($atts, $content) {
+        $color = !empty($atts['color']) ? $atts['color'] : '';
+        $text  = !empty($atts['text'])  ? $atts['text']  : '';
+        $title = !empty($atts['title']) ? $atts['title'] : '';
+
+        $class = $color . " " . $text . "-text";
+
+        ob_start();
+        ?>
+            <div class="collapsible-header <?php echo $class; ?>">
+                <?php echo $title; ?>
+            </div>
+            <div class="collapsible-body <?php echo $class; ?>"><p>
+                <?php echo do_shortcode($content); ?>
+            </p></div>
+        <?php
+        return ob_get_clean();
+    }
+
 }

@@ -75,6 +75,7 @@ add_shortcode('card_open',   array('Cards', 'cardRevealOpenContent'));
 
 /** Collapsibles */
 add_shortcode('collapsible', array('Collapsibles', 'collapsible'));
+add_shortcode('collapsible_item', array('Collapsibles', 'collapsibleItem'));
 
 /** Collections */
 add_shortcode('collection',         array('Collections', 'collection'));
