@@ -204,36 +204,443 @@ wonderland.
 
 
 ** Buttons
+
 *** Raised Button<<Raised Button>>
+
+    Available Attributes:
+    - to: The page to go to when the button is clicked
+    - color: The background color of the card (optional)
+    - text: The text color of the card (optional)
+      
+    Example:
+    #+BEGIN_SRC text
+    [btn to="/" color="blue" text="white"]Materializer Button[/btn]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-btn-raised.png]]
+
+
 *** Floating Button<<Floating Button>>
+    Available Attributes:
+    - to: The page to go to when the button is clicked
+    - color: The background color of the card (optional)
+    - text: The text color of the card (optional)
+      
+    Example:
+    #+BEGIN_SRC text
+    [btn_floating to="/"  color="red" text="white"]Home[/btn_floating]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-btn-floating-action.png]]
+
+
 *** Fixed Action Button<<Fixed Action Button>>
+
+    Available Attributes:
+    - color: The background color of the card (optional)
+    - text: The text color of the card (optional)
+    - action: Nested =[action]= shortcodes, that are the small popups
+      when the button is hovered, they take all the attributes, plus
+      the "to" attribute which is a link to a page.
+      
+    Example:
+    #+BEGIN_SRC text
+    [btn_fixed_action color="red" text="white"]Home
+    [action to="/contact-us" color="yellow" text="red"]Hi[/action]
+    [action to="/" color="blue" text="white"]You[/action]
+    [/btn_fixed_action]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-btn-fixed-action.png]]
+
+
 *** Flat Button<<Flat Button>>
+
+    Available Attributes:
+    - to: The page to go to when the button is clicked
+    - color: The background color of the card (optional)
+    - text: The text color of the card (optional)
+      
+    Example:
+    #+BEGIN_SRC text
+    [btn_flat to="/"]Home[/btn_floating]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-btn-flat.png]]
+
+
 *** Large Button<<Large Button>>
+
+    Available Attributes:
+    - to: The page to go to when the button is clicked
+    - color: The background color of the card (optional)
+    - text: The text color of the card (optional)
+      
+    Example:
+    #+BEGIN_SRC text
+    [btn_large to="/"]Home[/btn_floating]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-btn-large.png]]
+
+
 ** Collapsibles
+
 *** Collapsible<<Collapsible>>
+
+    Available Attributes:
+    - type: Either popout or nothing.
+    - style: Either accordion, expandable, or nothing.
+    - color: The backgrund color of the card (optional)
+    - text: The text color of the card (optional)
+    - collapsible_item: Nested =[collapsible_item]= shortcodes, that
+      make up each item in the component. They take a title, color,
+      and text attribute.
+      
+    Example:
+    #+BEGIN_SRC text
+    [collapsible]
+    [collapsible_item title="Item One"]Some content in here.[/collapsible_item]
+    [collapsible_item title="Item Two"]Some more content in here.[/collapsible_item]
+    [collapsible_item title="Item Three"]And some more content in this guy.[/collapsible_item]
+    [/collapsible]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-collapsible.png]]
+
+
+
 ** Collections
+
+
 *** Collection<<Collection>>
+
+    Available Attributes:
+    - color: The backgrund color of the card (optional)
+    - text: The text color of the card (optional)
+    - collection_item: Nested =[collection_item]= shortcodes, that
+      make up each item in the component. They take a color
+      and text color attribute.
+      
+    Example:
+    #+BEGIN_SRC text
+    [collection]
+    [collection_item]Alvin[/collection_item]
+    [collection_item]and the[/collection_item]
+    [collection_item]Chipmunks[/collection_item]
+    [/collection]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-collection.png]]
+
+
 *** Link Collection<<Link Collection>>
+
+    Available Attributes:
+    - type: Needs to be set to type="links"
+    - color: The backgrund color of the card (optional)
+    - text: The text color of the card (optional)
+    - collection_item: Nested =[collection_item]= shortcodes, that
+      make up each item in the component. They take a color
+      and text color attribute - as well as a "to" attribute which is
+      a page link.
+      
+    Example:
+    #+BEGIN_SRC text
+    [collection type="links"]
+    [collection_item]Alvin[/collection_item]
+    [collection_item]and the[/collection_item]
+    [collection_item]Chipmunks[/collection_item]
+    [/collection]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-collection-links.png]]
+
+
 ** Dropdowns 
+
+
 *** Dropdown<<Dropdown>>
+
+    Available Attributes:
+    - name: Give the dropdown component a name (required)
+    - color: The backgrund color of the card (optional)
+    - text: The text color of the card (optional)
+    - dropdown_item: Nested =[dropdown_item]= shortcodes, that
+      make up each item in the component. They take a color
+      and text color attribute - as well as a "to" attribute which is
+      a page to link to. 
+      
+    Example:
+    #+BEGIN_SRC text
+    [[dropdown name="mydrop" text="white"]
+    Drop Me Down
+    [dropdown_item to="/"]Home[/dropdown_item]
+    [dropdown_item to="/services/"]Services[/dropdown_item]
+    [dropdown_item to="/contact"]Contact Us[/dropdown_item]
+    [/dropdown]]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-dropdown.png]]
+
+
 ** Images
 *** Material Box Image<<Material Box Image>>
+
+    The Materializer Image Box displays a normal image, and when it
+    clicked, it open the image in a fullscreen "lightbox" style display.
+
+    Available Attributes:
+    - src: The link to the image 
+      
+    Example:
+    #+BEGIN_SRC text
+    [img_box src="http://mysite.com/image.jpg"]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-image-box.png]]
+
+
 *** Responsive Image<<Responsive Image>>
+
+    Automatically makes images responsive
+
+    Available Attributes:
+    - src: The link to the image 
+      
+    Example:
+    #+BEGIN_SRC text
+    [img_responsive src="http://mysite.com/image.jpg"]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-image-responsive.png]]
+
+
 *** Circular Image<<Circular Image>>
+
+    Makes any image circular
+
+    Available Attributes:
+    - src: The link to the image 
+      
+    Example:
+    #+BEGIN_SRC text
+    [img_circle src="http://mysite.com/image.jpg"]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-image-circular.png]]
+
+
 ** Pagination
+
+
 *** Pagination<<Pagination>>
+
+    Available Attributes:
+    - color: The backgrund color of the card (optional)
+    - text: The text color of the card (optional)
+    - Links: Nested Action Link short-codes (optional)
+    - items: [pag_item]'s are what make up the pagination. In addition
+      to color and text, These can take a variety of attributes:
+      - disabled: unclickable
+      - active: make this pag_item active
+      - to: a link to a page
+      
+    Example:
+    #+BEGIN_SRC text
+    [pagination]
+    [pag_item disabled]<[/pag_item]
+    [pag_item to="#!" active]1[/pag_item]
+    [pag_item to="/page-2"]2[/pag_item]
+    [pag_item to="/page-3"]3[/pag_item]
+    [pag_item to="/page-4"]4[/pag_item]
+    [pag_item to="/page-5"]5[/pag_item]
+    [pag_item to="/page-6"]6[/pag_item]
+    [pag_item to="/pages"]>[/pag_item]
+    [/pagination]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-pagination.png]]
+
+
+
 ** Loading Icons
+
+
 *** Linear Loader<<Linear Loader>>
+
+    Available Attributes:
+    - color: The backgrund color of the loader (optional)
+    - text: The progress color of the loader (optional)
+      
+    Example:
+    #+BEGIN_SRC text
+    [preloader_linear]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-preloader-linear.png]]
+
+
 *** Fixed Linear Loader<<Fixed Linear Loader>>
+
+    Available Attributes:
+    - color: The backgrund color of the loader (optional)
+    - text: The progress color of the loader (optional)
+    - width: The width of the progress bar to fill
+      
+    Example:
+    #+BEGIN_SRC text
+    [preloader_linear width="75%"]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-preloader-linear-fixed.png]]
+
+
 *** Circular Loader<<Circular Loader>>
+
+    Available Attributes:
+    - color: The color of the loader (optional)
+      
+    Example:
+    #+BEGIN_SRC text
+    [preloader_circular]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-preloader-circular.png]]
+
+
 *** Flashing Circular Loader<<Flashing Circular Loader>>
+
+    Available Attributes:
+    - flashing: This needs to be inside the shortcode. 
+      
+    Example:
+    #+BEGIN_SRC text
+    [preloader_circular flashing]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-preloader-circular-flashing.png]]
+
+
 ** Tables
+
+   The table shortcodes are a bit different in that they only /wrap/
+   existing HTML (or shortcodes).
+   
+   You can use any of the table types (striped, hoverable, centered,
+   responsive, bordered) together in the same shortcode.
+
+    Example:
+    #+BEGIN_SRC text
+    [table style="striped"]
+    <thead>
+     <tr>
+       <th data-field="name">Item Name</th>
+       <th data-field="price">Item Price</th>
+     </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>Eclair</td>
+          <td>$0.87</td>
+        </tr>
+        <tr>
+          <td>Jellybean</td>
+          <td>$3.76</td>
+        </tr>
+        <tr>
+          <td>Lollipop</td>
+          <td>$7.00</td>
+        </tr>
+    </tbody>
+    [/table]
+    #+END_SRC
+
+
 *** Striped Table<<Striped Table>>
+
+    Available Attributes:
+    - color: The backgrund color of the table (optional)
+    - text: The text color of the table (optional)
+      
+    [[file:./screenshots/materializer-table-striped.png]]
+
+
 *** Hoverable Table<<Hoverable Table>>
+
+    Available Attributes:
+    - color: The backgrund color of the table (optional)
+    - text: The text color of the table (optional)
+      
+    [[file:./screenshots/materializer-table-hoverable.png]]
+
+
 *** Centered Table<<Centered Table>>
+
+    Available Attributes:
+    - color: The backgrund color of the table (optional)
+    - text: The text color of the table (optional)
+      
+    [[file:./screenshots/materializer-table-centered.png]]
+
+
 *** Bordered Table<<Bordered Table>>
+
+    Available Attributes:
+    - color: The backgrund color of the table (optional)
+    - text: The text color of the table (optional)
+      
+    [[file:./screenshots/materializer-table-bordered.png]]
+
+
 *** Responsive Table<<Responsive Table>>
+
+    Available Attributes:
+    - color: The backgrund color of the table (optional)
+    - text: The text color of the table (optional)
+      
+    [[file:./screenshots/materializer-table-responsive.png]]
+
+
 ** Videos
+
 *** Responsive Video<<Responsive Video>>
+
+    Available Attributes:
+    - src: the link to the video 
+    - width: the width of the video in px (optional)
+    - height: the height of the video in px (optional)
+    - allowfullscreen: Allow the video to be made fullscreen (no
+      value, just set inside the shortcode)
+    - nocontrols: Remove play, pause, progress controls (no
+      value, just set inside the shortcode)
+    - frameborder: Width of the border around the video (recommended
+      0, optional)
+      
+    Example:
+    #+BEGIN_SRC text
+    [video src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" width="500px" width="100%" allowfullscreen]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-video-responsive.png]]
+
+
 *** HTML5 Video<<HTML5 Video>>
 
+    Available Attributes:
+    - src: the link to the video 
+    - width: the width of the video in px (optional)
+    - height: the height of the video in px (optional)
+    - allowfullscreen: Allow the video to be made fullscreen (no
+      value, just set inside the shortcode)
+    - nocontrols: Remove play, pause, progress controls (no
+      value, just set inside the shortcode)
+    - frameborder: Width of the border around the video (recommended
+      0, optional)
+      
+    Example:
+    #+BEGIN_SRC text
+    [video src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" width="500px" width="100%" allowfullscreen]
+    #+END_SRC
+    
+    [[file:./screenshots/materializer-video-html5.png]]
