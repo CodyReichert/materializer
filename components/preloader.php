@@ -46,7 +46,7 @@ class Preloaders extends MaterializerShortcodes {
     public function circularPreloader($atts) {
         $color = !empty($atts['color']) ? $atts['color'] : 'blue';
 
-        if(!in_array('flashing', $atts)) {
+        if(!is_array($atts) || !in_array('flashing', $atts)) {
             ob_start();
             ?>
                 <div class="preloader-wrapper big active">

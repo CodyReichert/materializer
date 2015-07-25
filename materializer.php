@@ -23,10 +23,8 @@ require_once "components/collections.php";
 require_once "components/dropdown.php";
 require_once "components/footer.php";
 require_once "components/images.php";
-require_once "components/navbar.php";
 require_once "components/pagination.php";
 require_once "components/preloader.php";
-require_once "components/sidenav.php";
 require_once "components/tables.php";
 require_once "components/tabs.php";
 require_once "components/videos.php";
@@ -93,9 +91,6 @@ add_shortcode('footer', array('Footers', 'footer'));
 add_shortcode('img_responsive', array('Images', 'responsiveImage'));
 add_shortcode('img_circle',     array('Images', 'circularImage'));
 
-/** Navbar */
-add_shortcode('navbar', array('Navigation', 'navbar'));
-
 /** Pagination */
 add_shortcode('pagination', array('Paginations', 'pagination'));
 add_shortcode('pag_item',   array('Paginations', 'paginationItem'));
@@ -103,9 +98,6 @@ add_shortcode('pag_item',   array('Paginations', 'paginationItem'));
 /** Preloaders */
 add_shortcode('preloader_linear',   array('Preloaders', 'linearPreloader'));
 add_shortcode('preloader_circular', array('Preloaders', 'circularPreloader'));
-
-/** Side Navs */
-add_shortcode('sidenav', array('SideNavs', 'sideNav'));
 
 /** Tables */
 add_shortcode('table', array('Tables', 'basicTable'));

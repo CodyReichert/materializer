@@ -15,37 +15,17 @@ class Tables extends MaterializerShortcodes {
      * @textColor:   text color
      * @style:       bodered/striped/hoverable/centered/responsive
      */
-    public function basicTable( $atts ) {
-        // TODO: Probably allow this to accept multiple
+    public function basicTable($atts, $content) {
         $style = $atts['style'] ? $atts['style'] : '';
+        $text  = $atts['style'] ? $atts['style'] : '';
+        $color = $atts['style'] ? $atts['style'] : '';
+
+        $class = "$style $text $color";
+
         ob_start();
         ?>
-            <table class="<?php echo $style; ?>">
-              <thead>
-                <tr>
-                    <th data-field="id">Name</th>
-                    <th data-field="name">Item Name</th>
-                    <th data-field="price">Item Price</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>Alvin</td>
-                  <td>Eclair</td>
-                  <td>$0.87</td>
-                </tr>
-                <tr>
-                  <td>Alan</td>
-                  <td>Jellybean</td>
-                  <td>$3.76</td>
-                </tr>
-                <tr>
-                  <td>Jonathan</td>
-                  <td>Lollipop</td>
-                  <td>$7.00</td>
-                </tr>
-              </tbody>
+            <table class="<?php echo $class; ?>">
+                <?php echo do_shortcode($content); ?>
             </table>
         <?php
         return ob_get_clean();
