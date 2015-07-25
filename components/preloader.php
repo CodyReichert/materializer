@@ -15,12 +15,23 @@ class Preloaders extends MaterializerShortcodes {
      * @textColor:   text color
      * @percentage:  a % of the bar to fill (default is indeteriminate, which just keeps moving
      */
-    public function linearPreloader($atts) {
+    public function linearPreloader($atts, $content) {
+        $color = !empty($atts['color']) ? $atts['color'] : '';
+        $text  = !empty($atts['text'])  ? $atts['text']  : '';
+        $width = !empty($atts['width'])  ? $atts['width']  : '';
+
+        $class = $color . " " . $text . "-text";
+
         ob_start();
         ?>
-            <div class="progress">
-                <div class="determinate" style="width: 70%"></div>
-            </div>
+        <div class="progress <?php echo $class; ?>">
+            <?php if($width === "") { ?>
+                    <div class="indeterminate <?php echo $class; ?>"></div>
+            <?php } else { ?>
+                    <div class="determinate <?php echo $class; ?>"
+                         style="width: <?php echo $width; ?>;"></div>
+            <?php } ?>
+        </div>
         <?php
         return ob_get_clean();
     }
@@ -33,12 +44,13 @@ class Preloaders extends MaterializerShortcodes {
      * @flashing:    change through all the colors
      */
     public function circularPreloader($atts) {
+        $color = !empty($atts['color']) ? $atts['color'] : 'blue';
 
-        if(empty($atts['flashing'])) {
+        if(!in_array('flashing', $atts)) {
             ob_start();
             ?>
                 <div class="preloader-wrapper big active">
-                    <div class="spinner-layer spinner-blue-only">
+                    <div class="spinner-layer spinner-<?php echo $color; ?>-only">
                       <div class="circle-clipper left">
                         <div class="circle"></div>
                       </div><div class="gap-patch">
