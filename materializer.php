@@ -26,7 +26,6 @@ require_once "components/images.php";
 require_once "components/pagination.php";
 require_once "components/preloader.php";
 require_once "components/tables.php";
-require_once "components/tabs.php";
 require_once "components/videos.php";
 
 class MaterializerBase {
@@ -101,9 +100,6 @@ add_shortcode('preloader_circular', array('Preloaders', 'circularPreloader'));
 
 /** Tables */
 add_shortcode('table', array('Tables', 'basicTable'));
-
-/** Tabs */
-add_shortcode('tabs', array('Tabs', 'tabsShortcode'));
 
 /** Videos */
 add_shortcode('video',       array('Videos', 'externalVideo'));
