@@ -81,10 +81,10 @@ add_shortcode('collapsible_item', array('Collapsibles', 'collapsibleItem'));
 add_shortcode('collection',         array('Collections', 'collection'));
 add_shortcode('collection_item',    array('Collections', 'collectionItem'));
 add_shortcode('collection_link',   array('Collections', 'collectionLink'));
-add_shortcode('collection_avatars', array('Collections', 'collectionAvatars'));
 
 /** Dropdowns */
-add_shortcode('dropdown', array('Dropdowns', 'dropdown'));
+add_shortcode('dropdown',      array('Dropdowns', 'dropdown'));
+add_shortcode('dropdown_item', array('Dropdowns', 'dropdownItem'));
 
 /** Footer */
 add_shortcode('footer', array('Footers', 'footer'));
