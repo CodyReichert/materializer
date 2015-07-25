@@ -16,9 +16,17 @@ class Images extends MaterializerShortcodes {
      * @sticky:       true/false (Default false)
      */
     public function responsiveImage($atts) {
+        $src    = !empty($atts['src']) ? $atts['src'] : '#';
+        $class  = !empty($atts['class']) ? $atts['class'] : '';
+        $width  = !empty($atts['width']) ? $atts['width'] : '';
+        $height = !empty($atts['height']) ? $atts['height'] : '';
+
         ob_start();
         ?>
-            <img class="responsive-img" src="https://simplyrets.com/images/logo_button.png" />
+            <img class="responsive-img <?php echo $class; ?>"
+                 width="<?php echo $width; ?>"
+                 height="<?php echo $height; ?>"
+                 src="<?php echo $src; ?>" />
         <?php
         return ob_get_clean();
     }
@@ -31,9 +39,17 @@ class Images extends MaterializerShortcodes {
      * @sticky:       true/false (Default false)
      */
     public function circularImage($atts) {
+        $src    = !empty($atts['src']) ? $atts['src'] : '#';
+        $class  = !empty($atts['class']) ? $atts['class'] : '';
+        $width  = !empty($atts['width']) ? $atts['width'] : '';
+        $height = !empty($atts['height']) ? $atts['height'] : '';
+
         ob_start();
         ?>
-            <img class="responsive-img circle" src="https://simplyrets.com/images/scrot1.png" />
+            <img class="responsive-img circle <?php echo $class; ?>"
+                 width="<?php echo $width; ?>"
+                 height="<?php echo $height; ?>"
+                 src="<?php echo $src; ?>" />
         <?php
         return ob_get_clean();
     }

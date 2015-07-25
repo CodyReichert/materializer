@@ -25,10 +25,6 @@ class Dropdowns extends MaterializerShortcodes {
         $stripped_content = parent::strip_shortcode($content, 'dropdown_item');
         $dd_items = $items[0];
 
-        echo '<pre><code>';
-        var_dump($items);
-        echo '</pre></code>';
-
         ob_start();
         ?>
             <a class='dropdown-button btn <?php echo $class; ?>'
