@@ -89,6 +89,7 @@ add_shortcode('footer', array('Footers', 'footer'));
 /** Images */
 add_shortcode('img_responsive', array('Images', 'responsiveImage'));
 add_shortcode('img_circle',     array('Images', 'circularImage'));
+add_shortcode('img_box',        array('Images', 'imageBox'));
 
 /** Pagination */
 add_shortcode('pagination', array('Paginations', 'pagination'));

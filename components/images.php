@@ -53,4 +53,24 @@ class Images extends MaterializerShortcodes {
         <?php
         return ob_get_clean();
     }
+
+
+    public function imageBox($atts) {
+        $src    = !empty($atts['src']) ? $atts['src'] : '#';
+        $class  = !empty($atts['class']) ? $atts['class'] : '';
+        $width  = !empty($atts['width']) ? $atts['width'] : '';
+        $height = !empty($atts['height']) ? $atts['height'] : '';
+        $caption = !empty($atts['caption']) ? $atts['caption'] : '';
+
+        ob_start();
+        ?>
+            <img class="materialboxed" <?php echo $class; ?>"
+                 width="<?php echo $width; ?>"
+                 height="<?php echo $height; ?>"
+                 data-caption="<?php echo $caption; ?>"
+                 src="<?php echo $src; ?>" />
+        <?php
+        return ob_get_clean();
+    }
+
 }

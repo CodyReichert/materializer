@@ -16,10 +16,22 @@ class Videos extends MaterializerShortcodes {
      * @link:        Link to video
      */
     public function externalVideo($atts) {
+        $src         = !empty($atts['src'])         ? $atts['src']          : '#!';
+        $width       = !empty($atts['width'])       ? $atts['width']        : '';
+        $height      = !empty($atts['height'])      ? $atts['height']       : '';
+        $frameborder = !empty($atts['frameborder']) ? $atts['frameborder']  : '';
+        $nocontrols  = is_array($atts) && in_array('no-controls', $atts) ? 'no-controls' : '';
+        $fullscreen  = is_array($atts) && in_array('fullscreen', $atts) ? 'allowfullscreen' : '';
+
         ob_start();
         ?>
-          <div class="video-container">
-             <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+          <div class="video-container <?php echo $nocontrols; ?>">
+              <iframe width="<?php echo $width; ?>"
+                      height="<?php echo $height ?>"
+                      src="<?php echo $src; ?>"
+                      frameborder="<?php echo $frameborder; ?>"
+                      <?php echo $fullscreen; ?>>
+              </iframe>
           </div>
         <?php
         return ob_get_clean();
@@ -34,9 +46,17 @@ class Videos extends MaterializerShortcodes {
      * @sources:     Link to local video sources
      */
     public function localVideo($atts) {
+        $src         = !empty($atts['src'])         ? $atts['src']          : '#!';
+        $width       = !empty($atts['width'])       ? $atts['width']        : '';
+        $height      = !empty($atts['height'])      ? $atts['height']       : '';
+        $nocontrols  = is_array($atts) && in_array('no-controls', $atts) ? 'no-controls' : 'controls';
+
         ob_start();
         ?>
-            <video class="responsive-video" controls>
+            <video class="responsive-video"
+                   height="<?php echo $height ?>"
+                   width="<?php echo $width; ?>"
+                   <?php echo $nocontrols ?>>
                 <source src="movie.mp4" type="video/mp4">
             </video>
         <?php
