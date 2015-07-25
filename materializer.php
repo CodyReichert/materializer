@@ -98,6 +98,7 @@ add_shortcode('navbar', array('Navigation', 'navbar'));
 
 /** Pagination */
 add_shortcode('pagination', array('Paginations', 'pagination'));
+add_shortcode('pag_item',   array('Paginations', 'paginationItem'));
 
 /** Preloaders */
 add_shortcode('preloader_linear',   array('Preloaders', 'linearPreloader'));

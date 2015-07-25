@@ -14,18 +14,49 @@ class Paginations extends MaterializerShortcodes {
      * @color:       background color
      * @textColor:   text color
      */
-    public function pagination($atts) {
+    public function pagination($atts, $content) {
+        $color = !empty($atts['color']) ? $atts['color'] : '';
+        $text  = !empty($atts['text'])  ? $atts['text']  : '';
+
+        $class = $color . " " . $text . "-text";
+
+        $items = parent::get_stripped_shortcodes($content, 'pag_item');
+        $stripped_content = parent::strip_shortcode($content, 'pag_item');
+
+        $pag_items = $items[0];
+
         ob_start();
         ?>
-            <ul class="pagination">
-                <li class="disabled"><a href="#!"><</a></li>
-                <li class="active"><a href="#!">1</a></li>
-                <li class="waves-effect"><a href="#!">2</a></li>
-                <li class="waves-effect"><a href="#!">3</a></li>
-                <li class="waves-effect"><a href="#!">4</a></li>
-                <li class="waves-effect"><a href="#!">5</a></li>
-                <li class="waves-effect"><a href="#!">></a></li>
+            <ul class="pagination <?php echo $class; ?>">
+                <?php
+                if(!empty($pag_items)) {
+                    foreach($pag_items as $item) {
+                        echo do_shortcode($item);
+                    }
+                }
+                ?>
             </ul>
+        <?php
+        return ob_get_clean();
+    }
+
+    public function paginationItem($atts, $content) {
+        $to = !empty($atts['to']) ? $atts['to'] : '#!';
+        $color = !empty($atts['color']) ? $atts['color'] : '';
+        $text  = !empty($atts['text'])  ? $atts['text']  : '';
+
+        $disabled = in_array('disabled', $atts) ? "disabled" : '';
+        $active = in_array('active', $atts) ? "active" : '';
+
+        $class = $color . " " . $text . "-text " . $disabled . " " . $active;
+
+        ob_start();
+        ?>
+            <li class="waves-effect <?php echo $class; ?>">
+                <a href="<?php echo $to; ?>">
+                    <?php echo do_shortcode($content); ?>
+                </a>
+            </li>
         <?php
         return ob_get_clean();
     }
