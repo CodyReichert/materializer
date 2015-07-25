@@ -198,9 +198,7 @@ wonderland.
     [/card_reveal]
     #+END_SRC
 
-    Closed: 
     [[file:./screenshots/materializer-card-reveal-inner.png]]
-    Open:
     [[file:./screenshots/materializer-card-reveal-outer.png]]
 
 
@@ -382,7 +380,8 @@ wonderland.
     [/dropdown]]
     #+END_SRC
     
-    [[file:./screenshots/materializer-dropdown.png]]
+    [[file:./screenshots/materializer-dropdown-closed.png]]
+    [[file:./screenshots/materializer-dropdown-open.png]]
 
 
 ** Images
@@ -479,7 +478,7 @@ wonderland.
     [preloader_linear]
     #+END_SRC
     
-    [[file:./screenshots/materializer-preloader-linear.png]]
+    [[file:./screenshots/materializer-preload-linear.png]]
 
 
 *** Fixed Linear Loader<<Fixed Linear Loader>>
@@ -494,7 +493,7 @@ wonderland.
     [preloader_linear width="75%"]
     #+END_SRC
     
-    [[file:./screenshots/materializer-preloader-linear-fixed.png]]
+    [[file:./screenshots/materializer-preload-linear-fixed.png]]
 
 
 *** Circular Loader<<Circular Loader>>
@@ -507,7 +506,7 @@ wonderland.
     [preloader_circular]
     #+END_SRC
     
-    [[file:./screenshots/materializer-preloader-circular.png]]
+    [[file:./screenshots/materializer-preload-circular.png]]
 
 
 *** Flashing Circular Loader<<Flashing Circular Loader>>
@@ -520,7 +519,7 @@ wonderland.
     [preloader_circular flashing]
     #+END_SRC
     
-    [[file:./screenshots/materializer-preloader-circular-flashing.png]]
+    [[file:./screenshots/materializer-preload-circular-flashing.png]]
 
 
 ** Tables
