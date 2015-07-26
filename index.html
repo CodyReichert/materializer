@@ -1,0 +1,859 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Materializer by CodyReichert</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Materializer</h1>
+        <p>The Documentation for Materializer WP</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/CodyReichert/materializer" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/CodyReichert/materializer/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/CodyReichert/materializer/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a id="materializer-wp" class="anchor" href="#materializer-wp" aria-hidden="true"><span class="octicon octicon-link"></span></a>Materializer WP</h1>
+
+<p>A set of Material Design components for WordPress</p>
+
+<p>Materializer WP is a fully-featured set of Material Design components,
+packed up in a WordPress plugin, and ready to be used on any website.</p>
+
+<p>The plugin is ‘short-code based’, so you can use all of the features
+easily on any post, page, or custom post type. There over 25 different
+short-codes and components that take care of all the hard work, and
+allow you to turn any blog or website into a Material Design wonderland.</p>
+
+<h1>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h1>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>To install the plugin:</p>
+
+<ul>
+<li>  Download the `.zip` file.</li>
+<li>  In your Wordpress Dashboard, navigate to “Plugins -&gt; Add New”</li>
+<li>  Select “Upload Plugin”, and choose this plugins zip file from
+your computer. Hit “Install Now”.</li>
+<li>  Once installed, simply press “Activate Plugin”, and you’re ready to
+go!</li>
+</ul>
+
+<h2>
+<a id="quick-start" class="anchor" href="#quick-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Start</h2>
+
+<p>As a quick example of what’s possible, here is how you would set up a
+<a href="https://www.google.com/design/spec/components/cards.html">Material Design Card</a>:</p>
+
+<pre lang="commonlisp"><code>  [card title="A Cool Card!" text="text-darken-3 grey" title_color="blue"]
+  I am a very simple card. I am good at containing mall bits of
+  information. I am convenient because I require little markup to use
+  effectively.
+  [link text="blue" to="/"]Go Home[/link]
+  [/card]
+</code></pre>
+
+<p><img src="screenshots/materializer-card.png" alt=""></p>
+
+<p>In this example, we have a <code>[card][/card]</code> shortcode, with a few
+attributes. A title, the text color, and the title color. Inside of the
+shortcode we have a couple more things: The card’s text, and action
+links (which also have a text color attribute, and a <code>to</code> attribute
+which links to the home page).</p>
+
+<p>And a Material Design card is as easy as that. Cards are a great way to
+have useful information and actions pop out at your visitor, while
+keeping a slick design.</p>
+
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h1>
+
+<h2>
+<a id="shortcodes" class="anchor" href="#shortcodes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortcodes</h2>
+
+<p>There are over 25 different shortcodes and components to choose from.
+All of the shortcodes contain “attributes” that allow several different
+ways to build one component.</p>
+
+<p>Below is a list of all the currently available components, click on one
+to view an example, and see how to customize it.</p>
+
+<p><strong>Cards</strong></p>
+
+<ul>
+<li>  <em>Basic Card</em>
+</li>
+<li>  <em>Image Card</em>
+</li>
+<li>  <em>Revealing Card</em>
+</li>
+</ul>
+
+<p><strong>Buttons</strong></p>
+
+<ul>
+<li>  <em>Raised Button</em>
+</li>
+<li>  <em>Floating Button</em>
+</li>
+<li>  <em>Fixed Action Button</em>
+</li>
+<li>  <em>Flat Button</em>
+</li>
+<li>  <em>Large Button</em>
+</li>
+</ul>
+
+<p><strong>Collapsibles</strong></p>
+
+<ul>
+<li>  <a href="#Collapsible">Collapsible</a>
+</li>
+</ul>
+
+<p><strong>Collections</strong></p>
+
+<ul>
+<li>  <a href="#Collection">Collection</a>
+</li>
+<li>  <em>Link Collection</em>
+</li>
+</ul>
+
+<p><strong>Dropdowns</strong></p>
+
+<ul>
+<li>  <a href="#Dropdown">Dropdown</a>
+</li>
+</ul>
+
+<p><strong>Images</strong></p>
+
+<ul>
+<li>  <em>Material Box Image</em>
+</li>
+<li>  <em>Responsive Image</em>
+</li>
+<li>  <em>Circular Image</em>
+</li>
+</ul>
+
+<p><strong>Pagination</strong></p>
+
+<ul>
+<li>  <a href="#Pagination">Pagination</a>
+</li>
+</ul>
+
+<p><strong>Loading Icons</strong></p>
+
+<ul>
+<li>  <em>Linear Loader</em>
+</li>
+<li>  <em>Fixed Linear Loader</em>
+</li>
+<li>  <em>Circular Loader</em>
+</li>
+<li>  <em>Flashing Circular Loader</em>
+</li>
+</ul>
+
+<p><strong>Tables</strong></p>
+
+<ul>
+<li>  <em>Striped Table</em>
+</li>
+<li>  <em>Hoverable Table</em>
+</li>
+<li>  <em>Centered Table</em>
+</li>
+<li>  <em>Bordered Table</em>
+</li>
+<li>  <em>Responsive Table</em>
+</li>
+</ul>
+
+<p><strong>Viedos</strong></p>
+
+<ul>
+<li>  <em>Responsive Video</em>
+</li>
+<li>  <em>HTML5 Video</em>
+</li>
+</ul>
+
+<h2>
+<a id="color-pallette" class="anchor" href="#color-pallette" aria-hidden="true"><span class="octicon octicon-link"></span></a>Color Pallette</h2>
+
+<p>There is a built in Material Design Color pallette that be used with
+every short-code. You’re not stuck with the default color scheme, so you
+can integrate Materializer into your existing website seamlessly.</p>
+
+<p>…more info coming soon!</p>
+
+<h1>
+<a id="shortcode-details" class="anchor" href="#shortcode-details" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortcode Details</h1>
+
+<h2>
+<a id="cards" class="anchor" href="#cards" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cards</h2>
+
+<h3>
+<a id="basic-cardbasic-card" class="anchor" href="#basic-cardbasic-card" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Card&lt;&lt;Basic Card&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  title: The title of the card (optional)</li>
+<li>  title~color~: The color of the title (optional)</li>
+<li>  color: The backgrund color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+<li>  Links: Nested Action Link short-codes (optional)</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>  [card title="A Cool Card!" text="text-darken-3 grey" title_color="blue"]
+  I am a very simple card. I am good at containing mall bits of
+  information. I am convenient because I require little markup to use
+  effectively.
+  [link text="blue" to="/"]Home[/link]
+  [/card]
+</code></pre>
+
+<p><img src="screenshots/materializer-card.png" alt=""></p>
+
+<p>A Basic Card can also be refitted to be a more simple Card Panel:</p>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[card color="teal" text="white"]
+This is a simple panel card, these are really great for just
+blocking together small bits of markup on a nice eye-catching
+color
+[/card]
+</code></pre>
+
+<p><img src="screenshots/materializer-card-panel.png" alt=""></p>
+
+<h3>
+<a id="image-cardimage-card" class="anchor" href="#image-cardimage-card" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Card&lt;&lt;Image Card&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  img: The link to an image for display on the card</li>
+<li>  color: The background color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+<li>  Links: Nested Action Link short-codes (optional)</li>
+</ul>
+
+<pre lang="text"><code>  [card_img img="/wordpress-logo.png"]
+  I am a very simple image card. I am good at containing images with
+  action links.
+  [link text="blue" to="/"]Home[/link]
+  [/card_img]
+</code></pre>
+
+<p><img src="screenshots/materializer-card-img.png" alt=""></p>
+
+<h3>
+<a id="revelealing-cardrevealing-card" class="anchor" href="#revelealing-cardrevealing-card" aria-hidden="true"><span class="octicon octicon-link"></span></a>Revelealing Card&lt;&lt;Revealing Card&gt;&gt;</h3>
+
+<p>A Revealing Card is like a Basic Card that can be opened to display more
+information.</p>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  title: The title of the card (optional)</li>
+<li>  title~color~: The color of the title (optional)</li>
+<li>  color: The backgrund color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+<li>  img: The link to an image for display on the card</li>
+<li>  links: Nested Action Link short-codes (optional)</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[card_revealtitle="A Revealing Card"]
+I am a very cool revealing card. I am good at containing content, with
+more content inside.
+[link text="blue" to="/"]Go Home[/link]
+[card_open]And here is some more content inside with some other really cool stuff.[/card_open]
+[/card_reveal]
+</code></pre>
+
+<p><img src="screenshots/materializer-card-reveal-inner.png" alt="">
+<img src="screenshots/materializer-card-reveal-outer.png" alt=""></p>
+
+<h2>
+<a id="buttons" class="anchor" href="#buttons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Buttons</h2>
+
+<h3>
+<a id="raised-buttonraised-button" class="anchor" href="#raised-buttonraised-button" aria-hidden="true"><span class="octicon octicon-link"></span></a>Raised Button&lt;&lt;Raised Button&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  to: The page to go to when the button is clicked</li>
+<li>  color: The background color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[btn to="/" color="blue" text="white"]Materializer Button[/btn]
+</code></pre>
+
+<p><img src="screenshots/materializer-btn-raised.png" alt=""></p>
+
+<h3>
+<a id="floating-buttonfloating-button" class="anchor" href="#floating-buttonfloating-button" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floating Button&lt;&lt;Floating Button&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  to: The page to go to when the button is clicked</li>
+<li>  color: The background color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[btn_floating to="/"  color="red" text="white"]Home[/btn_floating]
+</code></pre>
+
+<p><img src="screenshots/materializer-btn-floating-action.png" alt=""></p>
+
+<h3>
+<a id="fixed-action-buttonfixed-action-button" class="anchor" href="#fixed-action-buttonfixed-action-button" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fixed Action Button&lt;&lt;Fixed Action Button&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  color: The background color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+<li>  action: Nested <code>[action]</code> shortcodes, that are the small popups when
+the button is hovered, they take all the attributes, plus the “to”
+attribute which is a link to a page.</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[btn_fixed_action color="red" text="white"]Home
+[action to="/contact-us" color="yellow" text="red"]Hi[/action]
+[action to="/" color="blue" text="white"]You[/action]
+[/btn_fixed_action]
+</code></pre>
+
+<p><img src="screenshots/materializer-btn-fixed-action.png" alt=""></p>
+
+<h3>
+<a id="flat-buttonflat-button" class="anchor" href="#flat-buttonflat-button" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flat Button&lt;&lt;Flat Button&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  to: The page to go to when the button is clicked</li>
+<li>  color: The background color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[btn_flat to="/"]Home[/btn_floating]
+</code></pre>
+
+<p><img src="screenshots/materializer-btn-flat.png" alt=""></p>
+
+<h3>
+<a id="large-buttonlarge-button" class="anchor" href="#large-buttonlarge-button" aria-hidden="true"><span class="octicon octicon-link"></span></a>Large Button&lt;&lt;Large Button&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  to: The page to go to when the button is clicked</li>
+<li>  color: The background color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[btn_large to="/"]Home[/btn_floating]
+</code></pre>
+
+<p><img src="screenshots/materializer-btn-large.png" alt=""></p>
+
+<h2>
+<a id="collapsibles" class="anchor" href="#collapsibles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collapsibles</h2>
+
+<h3>
+<a id="collapsible" class="anchor" href="#collapsible" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collapsible</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  type: Either popout or nothing.</li>
+<li>  style: Either accordion, expandable, or nothing.</li>
+<li>  color: The backgrund color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+<li>  collapsible~item~: Nested <code>[collapsible_item]</code> shortcodes, that make
+up each item in the component. They take a title, color, and
+text attribute.</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[collapsible]
+[collapsible_item title="Item One"]Some content in here.[/collapsible_item]
+[collapsible_item title="Item Two"]Some more content in here.[/collapsible_item]
+[collapsible_item title="Item Three"]And some more content in this guy.[/collapsible_item]
+[/collapsible]
+</code></pre>
+
+<p><img src="screenshots/materializer-collapsible.png" alt=""></p>
+
+<h2>
+<a id="collections" class="anchor" href="#collections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collections</h2>
+
+<h3>
+<a id="collection" class="anchor" href="#collection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collection</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  color: The backgrund color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+<li>  collection~item~: Nested <code>[collection_item]</code> shortcodes, that make
+up each item in the component. They take a color and text
+color attribute.</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[collection]
+[collection_item]Alvin[/collection_item]
+[collection_item]and the[/collection_item]
+[collection_item]Chipmunks[/collection_item]
+[/collection]
+</code></pre>
+
+<p><img src="screenshots/materializer-collection.png" alt=""></p>
+
+<h3>
+<a id="link-collectionlink-collection" class="anchor" href="#link-collectionlink-collection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Link Collection&lt;&lt;Link Collection&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  type: Needs to be set to type=“links”</li>
+<li>  color: The backgrund color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+<li>  collection~item~: Nested <code>[collection_item]</code> shortcodes, that make
+up each item in the component. They take a color and text color
+attribute - as well as a “to” attribute which is a page link.</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[collection type="links"]
+[collection_item]Alvin[/collection_item]
+[collection_item]and the[/collection_item]
+[collection_item]Chipmunks[/collection_item]
+[/collection]
+</code></pre>
+
+<p><img src="screenshots/materializer-collection-links.png" alt=""></p>
+
+<h2>
+<a id="dropdowns" class="anchor" href="#dropdowns" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dropdowns</h2>
+
+<h3>
+<a id="dropdown" class="anchor" href="#dropdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dropdown</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  name: Give the dropdown component a name (required)</li>
+<li>  color: The backgrund color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+<li>  dropdown~item~: Nested <code>[dropdown_item]</code> shortcodes, that make up
+each item in the component. They take a color and text color
+attribute - as well as a “to” attribute which is a page to link to.</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[[dropdown name="mydrop" text="white"]
+Drop Me Down
+[dropdown_item to="/"]Home[/dropdown_item]
+[dropdown_item to="/services/"]Services[/dropdown_item]
+[dropdown_item to="/contact"]Contact Us[/dropdown_item]
+[/dropdown]]
+</code></pre>
+
+<p><img src="screenshots/materializer-dropdown-closed.png" alt="">
+<img src="screenshots/materializer-dropdown-open.png" alt=""></p>
+
+<h2>
+<a id="images" class="anchor" href="#images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Images</h2>
+
+<h3>
+<a id="material-box-imagematerial-box-image" class="anchor" href="#material-box-imagematerial-box-image" aria-hidden="true"><span class="octicon octicon-link"></span></a>Material Box Image&lt;&lt;Material Box Image&gt;&gt;</h3>
+
+<p>The Materializer Image Box displays a normal image, and when it clicked,
+it open the image in a fullscreen “lightbox” style display.</p>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  src: The link to the image</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[img_box src="http://mysite.com/image.jpg"]
+</code></pre>
+
+<p><img src="screenshots/materializer-image-box.png" alt=""></p>
+
+<h3>
+<a id="responsive-imageresponsive-image" class="anchor" href="#responsive-imageresponsive-image" aria-hidden="true"><span class="octicon octicon-link"></span></a>Responsive Image&lt;&lt;Responsive Image&gt;&gt;</h3>
+
+<p>Automatically makes images responsive</p>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  src: The link to the image</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[img_responsive src="http://mysite.com/image.jpg"]
+</code></pre>
+
+<p><img src="screenshots/materializer-image-responsive.png" alt=""></p>
+
+<h3>
+<a id="circular-imagecircular-image" class="anchor" href="#circular-imagecircular-image" aria-hidden="true"><span class="octicon octicon-link"></span></a>Circular Image&lt;&lt;Circular Image&gt;&gt;</h3>
+
+<p>Makes any image circular</p>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  src: The link to the image</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[img_circle src="http://mysite.com/image.jpg"]
+</code></pre>
+
+<p><img src="screenshots/materializer-image-circular.png" alt=""></p>
+
+<h2>
+<a id="pagination" class="anchor" href="#pagination" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pagination</h2>
+
+<h3>
+<a id="pagination-1" class="anchor" href="#pagination-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pagination</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  color: The backgrund color of the card (optional)</li>
+<li>  text: The text color of the card (optional)</li>
+<li>  Links: Nested Action Link short-codes (optional)</li>
+<li>  items: [pag~item~]’s are what make up the pagination. In addition
+to color and text, These can take a variety of attributes:
+
+<ul>
+<li>  disabled: unclickable</li>
+<li>  active: make this pag~item~ active</li>
+<li>  to: a link to a page</li>
+</ul>
+</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[pagination]
+[pag_item disabled]&lt;[/pag_item]
+[pag_item to="#!" active]1[/pag_item]
+[pag_item to="/page-2"]2[/pag_item]
+[pag_item to="/page-3"]3[/pag_item]
+[pag_item to="/page-4"]4[/pag_item]
+[pag_item to="/page-5"]5[/pag_item]
+[pag_item to="/page-6"]6[/pag_item]
+[pag_item to="/pages"]&gt;[/pag_item]
+[/pagination]
+</code></pre>
+
+<p><img src="screenshots/materializer-pagination.png" alt=""></p>
+
+<h2>
+<a id="loading-icons" class="anchor" href="#loading-icons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading Icons</h2>
+
+<h3>
+<a id="linear-loaderlinear-loader" class="anchor" href="#linear-loaderlinear-loader" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear Loader&lt;&lt;Linear Loader&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  color: The backgrund color of the loader (optional)</li>
+<li>  text: The progress color of the loader (optional)</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[preloader_linear]
+</code></pre>
+
+<p><img src="screenshots/materializer-preload-linear.png" alt=""></p>
+
+<h3>
+<a id="fixed-linear-loaderfixed-linear-loader" class="anchor" href="#fixed-linear-loaderfixed-linear-loader" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fixed Linear Loader&lt;&lt;Fixed Linear Loader&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  color: The backgrund color of the loader (optional)</li>
+<li>  text: The progress color of the loader (optional)</li>
+<li>  width: The width of the progress bar to fill</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[preloader_linear width="75%"]
+</code></pre>
+
+<p><img src="screenshots/materializer-preload-linear-fixed.png" alt=""></p>
+
+<h3>
+<a id="circular-loadercircular-loader" class="anchor" href="#circular-loadercircular-loader" aria-hidden="true"><span class="octicon octicon-link"></span></a>Circular Loader&lt;&lt;Circular Loader&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  color: The color of the loader (optional)</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[preloader_circular]
+</code></pre>
+
+<p><img src="screenshots/materializer-preload-circular.png" alt=""></p>
+
+<h3>
+<a id="flashing-circular-loaderflashing-circular-loader" class="anchor" href="#flashing-circular-loaderflashing-circular-loader" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flashing Circular Loader&lt;&lt;Flashing Circular Loader&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  flashing: This needs to be inside the shortcode.</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[preloader_circular flashing]
+</code></pre>
+
+<p><img src="screenshots/materializer-preload-circular-flashing.png" alt=""></p>
+
+<h2>
+<a id="tables" class="anchor" href="#tables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tables</h2>
+
+<p>The table shortcodes are a bit different in that they only <em>wrap</em>
+existing HTML (or shortcodes).</p>
+
+<p>You can use any of the table types (striped, hoverable, centered,
+responsive, bordered) together in the same shortcode.</p>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[table style="striped"]
+&lt;thead&gt;
+ &lt;tr&gt;
+   &lt;th data-field="name"&gt;Item Name&lt;/th&gt;
+   &lt;th data-field="price"&gt;Item Price&lt;/th&gt;
+ &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Eclair&lt;/td&gt;
+      &lt;td&gt;$0.87&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Jellybean&lt;/td&gt;
+      &lt;td&gt;$3.76&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lollipop&lt;/td&gt;
+      &lt;td&gt;$7.00&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/tbody&gt;
+[/table]
+</code></pre>
+
+<h3>
+<a id="striped-tablestriped-table" class="anchor" href="#striped-tablestriped-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Striped Table&lt;&lt;Striped Table&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  color: The backgrund color of the table (optional)</li>
+<li>  text: The text color of the table (optional)</li>
+</ul>
+
+<p><img src="screenshots/materializer-table-striped.png" alt=""></p>
+
+<h3>
+<a id="hoverable-tablehoverable-table" class="anchor" href="#hoverable-tablehoverable-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hoverable Table&lt;&lt;Hoverable Table&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  color: The backgrund color of the table (optional)</li>
+<li>  text: The text color of the table (optional)</li>
+</ul>
+
+<p><img src="screenshots/materializer-table-hoverable.png" alt=""></p>
+
+<h3>
+<a id="centered-tablecentered-table" class="anchor" href="#centered-tablecentered-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Centered Table&lt;&lt;Centered Table&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  color: The backgrund color of the table (optional)</li>
+<li>  text: The text color of the table (optional)</li>
+</ul>
+
+<p><img src="screenshots/materializer-table-centered.png" alt=""></p>
+
+<h3>
+<a id="bordered-tablebordered-table" class="anchor" href="#bordered-tablebordered-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bordered Table&lt;&lt;Bordered Table&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  color: The backgrund color of the table (optional)</li>
+<li>  text: The text color of the table (optional)</li>
+</ul>
+
+<p><img src="screenshots/materializer-table-bordered.png" alt=""></p>
+
+<h3>
+<a id="responsive-tableresponsive-table" class="anchor" href="#responsive-tableresponsive-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Responsive Table&lt;&lt;Responsive Table&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  color: The backgrund color of the table (optional)</li>
+<li>  text: The text color of the table (optional)</li>
+</ul>
+
+<p><img src="screenshots/materializer-table-responsive.png" alt=""></p>
+
+<h2>
+<a id="videos" class="anchor" href="#videos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Videos</h2>
+
+<h3>
+<a id="responsive-videoresponsive-video" class="anchor" href="#responsive-videoresponsive-video" aria-hidden="true"><span class="octicon octicon-link"></span></a>Responsive Video&lt;&lt;Responsive Video&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  src: the link to the video</li>
+<li>  width: the width of the video in px (optional)</li>
+<li>  height: the height of the video in px (optional)</li>
+<li>  allowfullscreen: Allow the video to be made fullscreen (no value,
+just set inside the shortcode)</li>
+<li>  nocontrols: Remove play, pause, progress controls (no value, just
+set inside the shortcode)</li>
+<li>  frameborder: Width of the border around the video (recommended
+0, optional)</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[video src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" width="500px" width="100%" allowfullscreen]
+</code></pre>
+
+<p><img src="screenshots/materializer-video-responsive.png" alt=""></p>
+
+<h3>
+<a id="html5-videohtml5-video" class="anchor" href="#html5-videohtml5-video" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML5 Video&lt;&lt;HTML5 Video&gt;&gt;</h3>
+
+<p>Available Attributes:</p>
+
+<ul>
+<li>  src: the link to the video</li>
+<li>  width: the width of the video in px (optional)</li>
+<li>  height: the height of the video in px (optional)</li>
+<li>  allowfullscreen: Allow the video to be made fullscreen (no value,
+just set inside the shortcode)</li>
+<li>  nocontrols: Remove play, pause, progress controls (no value, just
+set inside the shortcode)</li>
+<li>  frameborder: Width of the border around the video (recommended
+0, optional)</li>
+</ul>
+
+<p>Example:</p>
+
+<pre lang="text"><code>[video src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" width="500px" width="100%" allowfullscreen]
+</code></pre>
+
+<p><img src="screenshots/materializer-video-html5.png" alt=""></p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/CodyReichert">CodyReichert</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-65614745-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
