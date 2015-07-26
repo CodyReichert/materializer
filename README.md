@@ -39,7 +39,7 @@ As a quick example of what’s possible, here is how you would set up a
   [/card]
 ```
 
-![](screenshots/materializer-card.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-card.png)
 
 In this example, we have a `[card][/card]` shortcode, with a few
 attributes. A title, the text color, and the title color. Inside of the
@@ -146,7 +146,7 @@ Example:
   [/card]
 ```
 
-![](screenshots/materializer-card.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-card.png)
 
 A Basic Card can also be refitted to be a more simple Card Panel:
 
@@ -160,7 +160,7 @@ color
 [/card]
 ```
 
-![](screenshots/materializer-card-panel.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-card-panel.png)
 
 ### Image Card&lt;&lt;Image Card&gt;&gt;
 
@@ -178,7 +178,7 @@ Available Attributes:
   [/card_img]
 ```
 
-![](screenshots/materializer-card-img.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-card-img.png)
 
 ### Revelealing Card&lt;&lt;Revealing Card&gt;&gt;
 
@@ -204,8 +204,8 @@ more content inside.
 [/card_reveal]
 ```
 
-![](screenshots/materializer-card-reveal-inner.png)
-![](screenshots/materializer-card-reveal-outer.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-card-reveal-inner.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-card-reveal-outer.png)
 
 Buttons
 -------
@@ -223,7 +223,7 @@ Example:
 [btn to="/" color="blue" text="white"]Materializer Button[/btn]
 ```
 
-![](screenshots/materializer-btn-raised.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-btn-raised.png)
 
 ### Floating Button&lt;&lt;Floating Button&gt;&gt;
 
@@ -238,7 +238,7 @@ Example:
 [btn_floating to="/"  color="red" text="white"]Home[/btn_floating]
 ```
 
-![](screenshots/materializer-btn-floating-action.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-btn-floating-action.png)
 
 ### Fixed Action Button&lt;&lt;Fixed Action Button&gt;&gt;
 
@@ -258,7 +258,7 @@ Example:
 [/btn_fixed_action]
 ```
 
-![](screenshots/materializer-btn-fixed-action.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-btn-fixed-action.png)
 
 ### Flat Button&lt;&lt;Flat Button&gt;&gt;
 
@@ -273,7 +273,7 @@ Example:
 [btn_flat to="/"]Home[/btn_floating]
 ```
 
-![](screenshots/materializer-btn-flat.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-btn-flat.png)
 
 ### Large Button&lt;&lt;Large Button&gt;&gt;
 
@@ -288,7 +288,7 @@ Example:
 [btn_large to="/"]Home[/btn_floating]
 ```
 
-![](screenshots/materializer-btn-large.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-btn-large.png)
 
 Collapsibles
 ------------
@@ -314,7 +314,7 @@ Example:
 [/collapsible]
 ```
 
-![](screenshots/materializer-collapsible.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-collapsible.png)
 
 Collections
 -----------
@@ -338,7 +338,7 @@ Example:
 [/collection]
 ```
 
-![](screenshots/materializer-collection.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-collection.png)
 
 ### Link Collection&lt;&lt;Link Collection&gt;&gt;
 
@@ -360,7 +360,7 @@ Example:
 [/collection]
 ```
 
-![](screenshots/materializer-collection-links.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-collection-links.png)
 
 Dropdowns
 ---------
@@ -386,8 +386,8 @@ Drop Me Down
 [/dropdown]]
 ```
 
-![](screenshots/materializer-dropdown-closed.png)
-![](screenshots/materializer-dropdown-open.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-dropdown-closed.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-dropdown-open.png)
 
 Images
 ------
@@ -406,7 +406,7 @@ Example:
 [img_box src="http://mysite.com/image.jpg"]
 ```
 
-![](screenshots/materializer-image-box.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-image-box.png)
 
 ### Responsive Image&lt;&lt;Responsive Image&gt;&gt;
 
@@ -421,7 +421,7 @@ Example:
 [img_responsive src="http://mysite.com/image.jpg"]
 ```
 
-![](screenshots/materializer-image-responsive.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-image-responsive.png)
 
 ### Circular Image&lt;&lt;Circular Image&gt;&gt;
 
@@ -436,7 +436,7 @@ Example:
 [img_circle src="http://mysite.com/image.jpg"]
 ```
 
-![](screenshots/materializer-image-circular.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-image-circular.png)
 
 Pagination
 ----------
@@ -468,7 +468,7 @@ Example:
 [/pagination]
 ```
 
-![](screenshots/materializer-pagination.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-pagination.png)
 
 Loading Icons
 -------------
@@ -485,7 +485,7 @@ Example:
 [preloader_linear]
 ```
 
-![](screenshots/materializer-preload-linear.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-preload-linear.png)
 
 ### Fixed Linear Loader&lt;&lt;Fixed Linear Loader&gt;&gt;
 
@@ -500,7 +500,7 @@ Example:
 [preloader_linear width="75%"]
 ```
 
-![](screenshots/materializer-preload-linear-fixed.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-preload-linear-fixed.png)
 
 ### Circular Loader&lt;&lt;Circular Loader&gt;&gt;
 
@@ -513,7 +513,7 @@ Example:
 [preloader_circular]
 ```
 
-![](screenshots/materializer-preload-circular.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-preload-circular.png)
 
 ### Flashing Circular Loader&lt;&lt;Flashing Circular Loader&gt;&gt;
 
@@ -526,7 +526,7 @@ Example:
 [preloader_circular flashing]
 ```
 
-![](screenshots/materializer-preload-circular-flashing.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-preload-circular-flashing.png)
 
 Tables
 ------
@@ -570,7 +570,7 @@ Available Attributes:
 -   color: The backgrund color of the table (optional)
 -   text: The text color of the table (optional)
 
-![](screenshots/materializer-table-striped.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-table-striped.png)
 
 ### Hoverable Table&lt;&lt;Hoverable Table&gt;&gt;
 
@@ -578,7 +578,7 @@ Available Attributes:
 -   color: The backgrund color of the table (optional)
 -   text: The text color of the table (optional)
 
-![](screenshots/materializer-table-hoverable.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-table-hoverable.png)
 
 ### Centered Table&lt;&lt;Centered Table&gt;&gt;
 
@@ -586,7 +586,7 @@ Available Attributes:
 -   color: The backgrund color of the table (optional)
 -   text: The text color of the table (optional)
 
-![](screenshots/materializer-table-centered.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-table-centered.png)
 
 ### Bordered Table&lt;&lt;Bordered Table&gt;&gt;
 
@@ -594,7 +594,7 @@ Available Attributes:
 -   color: The backgrund color of the table (optional)
 -   text: The text color of the table (optional)
 
-![](screenshots/materializer-table-bordered.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-table-bordered.png)
 
 ### Responsive Table&lt;&lt;Responsive Table&gt;&gt;
 
@@ -602,7 +602,7 @@ Available Attributes:
 -   color: The backgrund color of the table (optional)
 -   text: The text color of the table (optional)
 
-![](screenshots/materializer-table-responsive.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-table-responsive.png)
 
 Videos
 ------
@@ -626,7 +626,7 @@ Example:
 [video src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" width="500px" width="100%" allowfullscreen]
 ```
 
-![](screenshots/materializer-video-responsive.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-video-responsive.png)
 
 ### HTML5 Video&lt;&lt;HTML5 Video&gt;&gt;
 
@@ -647,4 +647,4 @@ Example:
 [video src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" width="500px" width="100%" allowfullscreen]
 ```
 
-![](screenshots/materializer-video-html5.png)
+![](https://raw.githubusercontent.com/CodyReichert/materializer/master/screenshots/materializer-video-html5.png)
