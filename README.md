@@ -1,9 +1,5 @@
----
-author: Cody Reichert
-description: 'A fully-featured set of Material Design components for WordPress'
-email: 'codyreichert@gmail.com'
-title: Materializer WP
-...
+# Materializer WP
+<small>A set of Material Design components for WordPress</small>
 
 Materializer WP is a fully-featured set of Material Design components,
 packed up in a WordPress plugin, and ready to be used on any website.
