@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Materializer
-Plugin URI: https://wpmaterializer.com
+Plugin URI: http://codyreichert.github.io/materializer
 Description: The Material Design components for WordPress
 Author: Materializer
 Version: 0.1.0
