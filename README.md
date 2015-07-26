@@ -32,8 +32,7 @@ Quick Start
 -----------
 
 As a quick example of what’s possible, here is how you would set up a
-[Material Design
-Card](https://www.google.com/design/spec/components/cards.html):
+[Material Design Card](https://www.google.com/design/spec/components/cards.html):
 
 ``` {.commonlisp}
   [card title="A Cool Card!" text="text-darken-3 grey" title_color="blue"]
@@ -44,7 +43,7 @@ Card](https://www.google.com/design/spec/components/cards.html):
   [/card]
 ```
 
-![](file:./screenshots/materializer-card.png)
+![](screenshots/materializer-card.png)
 
 In this example, we have a `[card][/card]` shortcode, with a few
 attributes. A title, the text color, and the title color. Inside of the
@@ -151,7 +150,7 @@ Example:
   [/card]
 ```
 
-![](file:./screenshots/materializer-card.png)
+![](screenshots/materializer-card.png)
 
 A Basic Card can also be refitted to be a more simple Card Panel:
 
@@ -165,7 +164,7 @@ color
 [/card]
 ```
 
-![](file:./screenshots/materializer-card-panel.png)
+![](screenshots/materializer-card-panel.png)
 
 ### Image Card&lt;&lt;Image Card&gt;&gt;
 
@@ -183,7 +182,7 @@ Available Attributes:
   [/card_img]
 ```
 
-![](file:./screenshots/materializer-card-img.png)
+![](screenshots/materializer-card-img.png)
 
 ### Revelealing Card&lt;&lt;Revealing Card&gt;&gt;
 
@@ -209,8 +208,8 @@ more content inside.
 [/card_reveal]
 ```
 
-![](file:./screenshots/materializer-card-reveal-inner.png)
-![](file:./screenshots/materializer-card-reveal-outer.png)
+![](screenshots/materializer-card-reveal-inner.png)
+![](screenshots/materializer-card-reveal-outer.png)
 
 Buttons
 -------
@@ -228,7 +227,7 @@ Example:
 [btn to="/" color="blue" text="white"]Materializer Button[/btn]
 ```
 
-![](file:./screenshots/materializer-btn-raised.png)
+![](screenshots/materializer-btn-raised.png)
 
 ### Floating Button&lt;&lt;Floating Button&gt;&gt;
 
@@ -243,7 +242,7 @@ Example:
 [btn_floating to="/"  color="red" text="white"]Home[/btn_floating]
 ```
 
-![](file:./screenshots/materializer-btn-floating-action.png)
+![](screenshots/materializer-btn-floating-action.png)
 
 ### Fixed Action Button&lt;&lt;Fixed Action Button&gt;&gt;
 
@@ -263,7 +262,7 @@ Example:
 [/btn_fixed_action]
 ```
 
-![](file:./screenshots/materializer-btn-fixed-action.png)
+![](screenshots/materializer-btn-fixed-action.png)
 
 ### Flat Button&lt;&lt;Flat Button&gt;&gt;
 
@@ -278,7 +277,7 @@ Example:
 [btn_flat to="/"]Home[/btn_floating]
 ```
 
-![](file:./screenshots/materializer-btn-flat.png)
+![](screenshots/materializer-btn-flat.png)
 
 ### Large Button&lt;&lt;Large Button&gt;&gt;
 
@@ -293,7 +292,7 @@ Example:
 [btn_large to="/"]Home[/btn_floating]
 ```
 
-![](file:./screenshots/materializer-btn-large.png)
+![](screenshots/materializer-btn-large.png)
 
 Collapsibles
 ------------
@@ -319,7 +318,7 @@ Example:
 [/collapsible]
 ```
 
-![](file:./screenshots/materializer-collapsible.png)
+![](screenshots/materializer-collapsible.png)
 
 Collections
 -----------
@@ -343,7 +342,7 @@ Example:
 [/collection]
 ```
 
-![](file:./screenshots/materializer-collection.png)
+![](screenshots/materializer-collection.png)
 
 ### Link Collection&lt;&lt;Link Collection&gt;&gt;
 
@@ -365,7 +364,7 @@ Example:
 [/collection]
 ```
 
-![](file:./screenshots/materializer-collection-links.png)
+![](screenshots/materializer-collection-links.png)
 
 Dropdowns
 ---------
@@ -391,8 +390,8 @@ Drop Me Down
 [/dropdown]]
 ```
 
-![](file:./screenshots/materializer-dropdown-closed.png)
-![](file:./screenshots/materializer-dropdown-open.png)
+![](screenshots/materializer-dropdown-closed.png)
+![](screenshots/materializer-dropdown-open.png)
 
 Images
 ------
@@ -411,7 +410,7 @@ Example:
 [img_box src="http://mysite.com/image.jpg"]
 ```
 
-![](file:./screenshots/materializer-image-box.png)
+![](screenshots/materializer-image-box.png)
 
 ### Responsive Image&lt;&lt;Responsive Image&gt;&gt;
 
@@ -426,7 +425,7 @@ Example:
 [img_responsive src="http://mysite.com/image.jpg"]
 ```
 
-![](file:./screenshots/materializer-image-responsive.png)
+![](screenshots/materializer-image-responsive.png)
 
 ### Circular Image&lt;&lt;Circular Image&gt;&gt;
 
@@ -441,7 +440,7 @@ Example:
 [img_circle src="http://mysite.com/image.jpg"]
 ```
 
-![](file:./screenshots/materializer-image-circular.png)
+![](screenshots/materializer-image-circular.png)
 
 Pagination
 ----------
@@ -473,7 +472,7 @@ Example:
 [/pagination]
 ```
 
-![](file:./screenshots/materializer-pagination.png)
+![](screenshots/materializer-pagination.png)
 
 Loading Icons
 -------------
@@ -490,7 +489,7 @@ Example:
 [preloader_linear]
 ```
 
-![](file:./screenshots/materializer-preload-linear.png)
+![](screenshots/materializer-preload-linear.png)
 
 ### Fixed Linear Loader&lt;&lt;Fixed Linear Loader&gt;&gt;
 
@@ -505,7 +504,7 @@ Example:
 [preloader_linear width="75%"]
 ```
 
-![](file:./screenshots/materializer-preload-linear-fixed.png)
+![](screenshots/materializer-preload-linear-fixed.png)
 
 ### Circular Loader&lt;&lt;Circular Loader&gt;&gt;
 
@@ -518,7 +517,7 @@ Example:
 [preloader_circular]
 ```
 
-![](file:./screenshots/materializer-preload-circular.png)
+![](screenshots/materializer-preload-circular.png)
 
 ### Flashing Circular Loader&lt;&lt;Flashing Circular Loader&gt;&gt;
 
@@ -531,7 +530,7 @@ Example:
 [preloader_circular flashing]
 ```
 
-![](file:./screenshots/materializer-preload-circular-flashing.png)
+![](screenshots/materializer-preload-circular-flashing.png)
 
 Tables
 ------
@@ -575,7 +574,7 @@ Available Attributes:
 -   color: The backgrund color of the table (optional)
 -   text: The text color of the table (optional)
 
-![](file:./screenshots/materializer-table-striped.png)
+![](screenshots/materializer-table-striped.png)
 
 ### Hoverable Table&lt;&lt;Hoverable Table&gt;&gt;
 
@@ -583,7 +582,7 @@ Available Attributes:
 -   color: The backgrund color of the table (optional)
 -   text: The text color of the table (optional)
 
-![](file:./screenshots/materializer-table-hoverable.png)
+![](screenshots/materializer-table-hoverable.png)
 
 ### Centered Table&lt;&lt;Centered Table&gt;&gt;
 
@@ -591,7 +590,7 @@ Available Attributes:
 -   color: The backgrund color of the table (optional)
 -   text: The text color of the table (optional)
 
-![](file:./screenshots/materializer-table-centered.png)
+![](screenshots/materializer-table-centered.png)
 
 ### Bordered Table&lt;&lt;Bordered Table&gt;&gt;
 
@@ -599,7 +598,7 @@ Available Attributes:
 -   color: The backgrund color of the table (optional)
 -   text: The text color of the table (optional)
 
-![](file:./screenshots/materializer-table-bordered.png)
+![](screenshots/materializer-table-bordered.png)
 
 ### Responsive Table&lt;&lt;Responsive Table&gt;&gt;
 
@@ -607,7 +606,7 @@ Available Attributes:
 -   color: The backgrund color of the table (optional)
 -   text: The text color of the table (optional)
 
-![](file:./screenshots/materializer-table-responsive.png)
+![](screenshots/materializer-table-responsive.png)
 
 Videos
 ------
@@ -631,7 +630,7 @@ Example:
 [video src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" width="500px" width="100%" allowfullscreen]
 ```
 
-![](file:./screenshots/materializer-video-responsive.png)
+![](screenshots/materializer-video-responsive.png)
 
 ### HTML5 Video&lt;&lt;HTML5 Video&gt;&gt;
 
@@ -652,4 +651,4 @@ Example:
 [video src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" width="500px" width="100%" allowfullscreen]
 ```
 
-![](file:./screenshots/materializer-video-html5.png)
+![](screenshots/materializer-video-html5.png)
