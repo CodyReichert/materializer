@@ -15,12 +15,21 @@ Documentation
 
 
 Code
-- materializer.php, in this directory, is the entry point for the plugin. Everything
-  stems from there.
-- shortcodes.php initializes the MaterializerShortcodes class (from which all of Materializers'
-  shortcodes extend into their class), and requires all of the files in components/.
-- The components/ directory contains a file for each set of shortcodes (eg, buttons.php).
-- The scripts/ director contains all of the css and javascript files (only a couple).
+- materializer.php, in this directory, is the entry point for the
+  plugin. Everything stems from there.
+- shortcodes.php initializes the MaterializerShortcodes class (from
+  which all of Materializers' shortcodes extend into their class), and
+  requires all of the files in components/.
+- The components/ directory contains a file for each set of shortcodes
+  (eg, buttons.php).
+- The scripts/ directory contains two subdirectories: dist/ and src/
+  - src contains the actual source files (scss and javascript)
+  - dist contains the compile source files (css and js). The compiled
+    files are not obfuscated in any way.  They are just minified to
+    maintain fast page loads. The unminified versions are bundled with
+    the plugin
+  - The static/src directory is setup with npm for dependencies and webpack
+    for development, which also handles the compilation for dist/
 
 
 Dependencies
