@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+</head>
+<body>
+<h1 id="materializer-wp">Materializer WP</h1>
+<p><small>A set of Material Design components for WordPress</small></p>
+<p>Materializer WP is a fully-featured set of Material Design components, packed up in a WordPress plugin, and ready to be used on any website.</p>
+<p>The plugin is ‘short-code based’, so you can use all of the features easily on any post, page, or custom post type. There over 25 different short-codes and components that take care of all the hard work, and allow you to turn any blog or website into a Material Design wonderland.</p>
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="installation">Installation</h2>
+<p>To install the plugin:</p>
+<ul>
+<li>Download the `.zip` file.</li>
+<li>In your Wordpress Dashboard, navigate to “Plugins -&gt; Add New”</li>
+<li>Select “Upload Plugin”, and choose this plugins zip file from your computer. Hit “Install Now”.</li>
+<li>Once installed, simply press “Activate Plugin”, and you’re ready to go!</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<p>As a quick example of what’s possible, here is how you would set up a <a href="https://www.google.com/design/spec/components/cards.html">Material Design Card</a>:</p>
+<div class="sourceCode"><pre class="sourceCode commonlisp"><code class="sourceCode commonlisp">  [card title=<span class="st">&quot;A Cool Card!&quot;</span> text=<span class="st">&quot;text-darken-3 grey&quot;</span> title_color=<span class="st">&quot;blue&quot;</span>]
+  I am a very simple card. I am good at containing mall bits of
+  information. I am convenient because I <span class="kw">require</span> little markup to use
+  effectively.
+  [link text=<span class="st">&quot;blue&quot;</span> to=<span class="st">&quot;/&quot;</span>]Go Home[/link]
+  [/card]</code></pre></div>
+<div class="figure">
+<img src="screenshots/materializer-card.png" alt="" />
+
+</div>
+<p>In this example, we have a <code>[card][/card]</code> shortcode, with a few attributes. A title, the text color, and the title color. Inside of the shortcode we have a couple more things: The card’s text, and action links (which also have a text color attribute, and a <code>to</code> attribute which links to the home page).</p>
+<p>And a Material Design card is as easy as that. Cards are a great way to have useful information and actions pop out at your visitor, while keeping a slick design.</p>
+<h1 id="features">Features</h1>
+<h2 id="shortcodes">Shortcodes</h2>
+<p>There are over 25 different shortcodes and components to choose from. All of the shortcodes contain “attributes” that allow several different ways to build one component.</p>
+<p>Below is a list of all the currently available components, click on one to view an example, and see how to customize it.</p>
+<p><strong>Cards</strong> - <em>Basic Card</em> - <em>Image Card</em> - <em>Revealing Card</em></p>
+<p><strong>Buttons</strong> - <em>Raised Button</em> - <em>Floating Button</em> - <em>Fixed Action Button</em> - <em>Flat Button</em> - <em>Large Button</em></p>
+<p><strong>Collapsibles</strong> - <a href="#Collapsible">Collapsible</a></p>
+<p><strong>Collections</strong> - <a href="#Collection">Collection</a> - <em>Link Collection</em></p>
+<p><strong>Dropdowns</strong> - <a href="#Dropdown">Dropdown</a></p>
+<p><strong>Images</strong> - <em>Material Box Image</em> - <em>Responsive Image</em> - <em>Circular Image</em></p>
+<p><strong>Pagination</strong> - <a href="#Pagination">Pagination</a></p>
+<p><strong>Loading Icons</strong> - <em>Linear Loader</em> - <em>Fixed Linear Loader</em> - <em>Circular Loader</em> - <em>Flashing Circular Loader</em></p>
+<p><strong>Tables</strong> - <em>Striped Table</em> - <em>Hoverable Table</em> - <em>Centered Table</em> - <em>Bordered Table</em> - <em>Responsive Table</em></p>
+<p><strong>Viedos</strong> - <em>Responsive Video</em> - <em>HTML5 Video</em></p>
+<h2 id="color-pallette">Color Pallette</h2>
+<p>There is a built in Material Design Color pallette that be used with every short-code. You’re not stuck with the default color scheme, so you can integrate Materializer into your existing website seamlessly.</p>
+<p>…more info coming soon!</p>
+<h1 id="shortcode-details">Shortcode Details</h1>
+<h2 id="cards">Cards</h2>
+<h3 id="basic-cardbasic-card">Basic Card&lt;&lt;Basic Card&gt;&gt;</h3>
+<p>Available Attributes: - title: The title of the card (optional) - title<sub>color</sub>: The color of the title (optional) - color: The backgrund color of the card (optional) - text: The text color of the card (optional) - Links: Nested Action Link short-codes (optional)</p>
+<p>Example:</p>
+<pre class="text"><code>  [card title=&quot;A Cool Card!&quot; text=&quot;text-darken-3 grey&quot; title_color=&quot;blue&quot;]
+  I am a very simple card. I am good at containing mall bits of
+  information. I am convenient because I require little markup to use
+  effectively.
+  [link text=&quot;blue&quot; to=&quot;/&quot;]Home[/link]
+  [/card]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-card.png" alt="" />
+
+</div>
+<p>A Basic Card can also be refitted to be a more simple Card Panel:</p>
+<p>Example:</p>
+<pre class="text"><code>[card color=&quot;teal&quot; text=&quot;white&quot;]
+This is a simple panel card, these are really great for just
+blocking together small bits of markup on a nice eye-catching
+color
+[/card]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-card-panel.png" alt="" />
+
+</div>
+<h3 id="image-cardimage-card">Image Card&lt;&lt;Image Card&gt;&gt;</h3>
+<p>Available Attributes: - img: The link to an image for display on the card - color: The background color of the card (optional) - text: The text color of the card (optional) - Links: Nested Action Link short-codes (optional)</p>
+<pre class="text"><code>  [card_img img=&quot;/wordpress-logo.png&quot;]
+  I am a very simple image card. I am good at containing images with
+  action links.
+  [link text=&quot;blue&quot; to=&quot;/&quot;]Home[/link]
+  [/card_img]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-card-img.png" alt="" />
+
+</div>
+<h3 id="revelealing-cardrevealing-card">Revelealing Card&lt;&lt;Revealing Card&gt;&gt;</h3>
+<p>A Revealing Card is like a Basic Card that can be opened to display more information.</p>
+<p>Available Attributes: - title: The title of the card (optional) - title<sub>color</sub>: The color of the title (optional) - color: The backgrund color of the card (optional) - text: The text color of the card (optional) - img: The link to an image for display on the card - links: Nested Action Link short-codes (optional)</p>
+<p>Example:</p>
+<pre class="text"><code>[card_revealtitle=&quot;A Revealing Card&quot;]
+I am a very cool revealing card. I am good at containing content, with
+more content inside.
+[link text=&quot;blue&quot; to=&quot;/&quot;]Go Home[/link]
+[card_open]And here is some more content inside with some other really cool stuff.[/card_open]
+[/card_reveal]</code></pre>
+<p><img src="screenshots/materializer-card-reveal-inner.png" alt="" /> <img src="screenshots/materializer-card-reveal-outer.png" alt="" /></p>
+<h2 id="buttons">Buttons</h2>
+<h3 id="raised-buttonraised-button">Raised Button&lt;&lt;Raised Button&gt;&gt;</h3>
+<p>Available Attributes: - to: The page to go to when the button is clicked - color: The background color of the card (optional) - text: The text color of the card (optional)</p>
+<p>Example:</p>
+<pre class="text"><code>[btn to=&quot;/&quot; color=&quot;blue&quot; text=&quot;white&quot;]Materializer Button[/btn]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-btn-raised.png" alt="" />
+
+</div>
+<h3 id="floating-buttonfloating-button">Floating Button&lt;&lt;Floating Button&gt;&gt;</h3>
+<p>Available Attributes: - to: The page to go to when the button is clicked - color: The background color of the card (optional) - text: The text color of the card (optional)</p>
+<p>Example:</p>
+<pre class="text"><code>[btn_floating to=&quot;/&quot;  color=&quot;red&quot; text=&quot;white&quot;]Home[/btn_floating]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-btn-floating-action.png" alt="" />
+
+</div>
+<h3 id="fixed-action-buttonfixed-action-button">Fixed Action Button&lt;&lt;Fixed Action Button&gt;&gt;</h3>
+<p>Available Attributes: - color: The background color of the card (optional) - text: The text color of the card (optional) - action: Nested <code>[action]</code> shortcodes, that are the small popups when the button is hovered, they take all the attributes, plus the “to” attribute which is a link to a page.</p>
+<p>Example:</p>
+<pre class="text"><code>[btn_fixed_action color=&quot;red&quot; text=&quot;white&quot;]Home
+[action to=&quot;/contact-us&quot; color=&quot;yellow&quot; text=&quot;red&quot;]Hi[/action]
+[action to=&quot;/&quot; color=&quot;blue&quot; text=&quot;white&quot;]You[/action]
+[/btn_fixed_action]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-btn-fixed-action.png" alt="" />
+
+</div>
+<h3 id="flat-buttonflat-button">Flat Button&lt;&lt;Flat Button&gt;&gt;</h3>
+<p>Available Attributes: - to: The page to go to when the button is clicked - color: The background color of the card (optional) - text: The text color of the card (optional)</p>
+<p>Example:</p>
+<pre class="text"><code>[btn_flat to=&quot;/&quot;]Home[/btn_floating]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-btn-flat.png" alt="" />
+
+</div>
+<h3 id="large-buttonlarge-button">Large Button&lt;&lt;Large Button&gt;&gt;</h3>
+<p>Available Attributes: - to: The page to go to when the button is clicked - color: The background color of the card (optional) - text: The text color of the card (optional)</p>
+<p>Example:</p>
+<pre class="text"><code>[btn_large to=&quot;/&quot;]Home[/btn_floating]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-btn-large.png" alt="" />
+
+</div>
+<h2 id="collapsibles">Collapsibles</h2>
+<h3 id="collapsible">Collapsible<span id="Collapsible"></span></h3>
+<p>Available Attributes: - type: Either popout or nothing. - style: Either accordion, expandable, or nothing. - color: The backgrund color of the card (optional) - text: The text color of the card (optional) - collapsible<sub>item</sub>: Nested <code>[collapsible_item]</code> shortcodes, that make up each item in the component. They take a title, color, and text attribute.</p>
+<p>Example:</p>
+<pre class="text"><code>[collapsible]
+[collapsible_item title=&quot;Item One&quot;]Some content in here.[/collapsible_item]
+[collapsible_item title=&quot;Item Two&quot;]Some more content in here.[/collapsible_item]
+[collapsible_item title=&quot;Item Three&quot;]And some more content in this guy.[/collapsible_item]
+[/collapsible]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-collapsible.png" alt="" />
+
+</div>
+<h2 id="collections">Collections</h2>
+<h3 id="collection">Collection<span id="Collection"></span></h3>
+<p>Available Attributes: - color: The backgrund color of the card (optional) - text: The text color of the card (optional) - collection<sub>item</sub>: Nested <code>[collection_item]</code> shortcodes, that make up each item in the component. They take a color and text color attribute.</p>
+<p>Example:</p>
+<pre class="text"><code>[collection]
+[collection_item]Alvin[/collection_item]
+[collection_item]and the[/collection_item]
+[collection_item]Chipmunks[/collection_item]
+[/collection]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-collection.png" alt="" />
+
+</div>
+<h3 id="link-collectionlink-collection">Link Collection&lt;&lt;Link Collection&gt;&gt;</h3>
+<p>Available Attributes: - type: Needs to be set to type=“links” - color: The backgrund color of the card (optional) - text: The text color of the card (optional) - collection<sub>item</sub>: Nested <code>[collection_item]</code> shortcodes, that make up each item in the component. They take a color and text color attribute - as well as a “to” attribute which is a page link.</p>
+<p>Example:</p>
+<pre class="text"><code>[collection type=&quot;links&quot;]
+[collection_item]Alvin[/collection_item]
+[collection_item]and the[/collection_item]
+[collection_item]Chipmunks[/collection_item]
+[/collection]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-collection-links.png" alt="" />
+
+</div>
+<h2 id="dropdowns">Dropdowns</h2>
+<h3 id="dropdown">Dropdown<span id="Dropdown"></span></h3>
+<p>Available Attributes: - name: Give the dropdown component a name (required) - color: The backgrund color of the card (optional) - text: The text color of the card (optional) - dropdown<sub>item</sub>: Nested <code>[dropdown_item]</code> shortcodes, that make up each item in the component. They take a color and text color attribute - as well as a “to” attribute which is a page to link to.</p>
+<p>Example:</p>
+<pre class="text"><code>[[dropdown name=&quot;mydrop&quot; text=&quot;white&quot;]
+Drop Me Down
+[dropdown_item to=&quot;/&quot;]Home[/dropdown_item]
+[dropdown_item to=&quot;/services/&quot;]Services[/dropdown_item]
+[dropdown_item to=&quot;/contact&quot;]Contact Us[/dropdown_item]
+[/dropdown]]</code></pre>
+<p><img src="screenshots/materializer-dropdown-closed.png" alt="" /> <img src="screenshots/materializer-dropdown-open.png" alt="" /></p>
+<h2 id="images">Images</h2>
+<h3 id="material-box-imagematerial-box-image">Material Box Image&lt;&lt;Material Box Image&gt;&gt;</h3>
+<p>The Materializer Image Box displays a normal image, and when it clicked, it open the image in a fullscreen “lightbox” style display.</p>
+<p>Available Attributes: - src: The link to the image</p>
+<p>Example:</p>
+<pre class="text"><code>[img_box src=&quot;http://mysite.com/image.jpg&quot;]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-image-box.png" alt="" />
+
+</div>
+<h3 id="responsive-imageresponsive-image">Responsive Image&lt;&lt;Responsive Image&gt;&gt;</h3>
+<p>Automatically makes images responsive</p>
+<p>Available Attributes: - src: The link to the image</p>
+<p>Example:</p>
+<pre class="text"><code>[img_responsive src=&quot;http://mysite.com/image.jpg&quot;]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-image-responsive.png" alt="" />
+
+</div>
+<h3 id="circular-imagecircular-image">Circular Image&lt;&lt;Circular Image&gt;&gt;</h3>
+<p>Makes any image circular</p>
+<p>Available Attributes: - src: The link to the image</p>
+<p>Example:</p>
+<pre class="text"><code>[img_circle src=&quot;http://mysite.com/image.jpg&quot;]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-image-circular.png" alt="" />
+
+</div>
+<h2 id="pagination">Pagination</h2>
+<h3 id="pagination-1">Pagination<span id="Pagination"></span></h3>
+<p>Available Attributes: - color: The backgrund color of the card (optional) - text: The text color of the card (optional) - Links: Nested Action Link short-codes (optional) - items: [pag<sub>item</sub>]’s are what make up the pagination. In addition to color and text, These can take a variety of attributes: - disabled: unclickable - active: make this pag<sub>item</sub> active - to: a link to a page</p>
+<p>Example:</p>
+<pre class="text"><code>[pagination]
+[pag_item disabled]&lt;[/pag_item]
+[pag_item to=&quot;#!&quot; active]1[/pag_item]
+[pag_item to=&quot;/page-2&quot;]2[/pag_item]
+[pag_item to=&quot;/page-3&quot;]3[/pag_item]
+[pag_item to=&quot;/page-4&quot;]4[/pag_item]
+[pag_item to=&quot;/page-5&quot;]5[/pag_item]
+[pag_item to=&quot;/page-6&quot;]6[/pag_item]
+[pag_item to=&quot;/pages&quot;]&gt;[/pag_item]
+[/pagination]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-pagination.png" alt="" />
+
+</div>
+<h2 id="loading-icons">Loading Icons</h2>
+<h3 id="linear-loaderlinear-loader">Linear Loader&lt;&lt;Linear Loader&gt;&gt;</h3>
+<p>Available Attributes: - color: The backgrund color of the loader (optional) - text: The progress color of the loader (optional)</p>
+<p>Example:</p>
+<pre class="text"><code>[preloader_linear]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-preload-linear.png" alt="" />
+
+</div>
+<h3 id="fixed-linear-loaderfixed-linear-loader">Fixed Linear Loader&lt;&lt;Fixed Linear Loader&gt;&gt;</h3>
+<p>Available Attributes: - color: The backgrund color of the loader (optional) - text: The progress color of the loader (optional) - width: The width of the progress bar to fill</p>
+<p>Example:</p>
+<pre class="text"><code>[preloader_linear width=&quot;75%&quot;]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-preload-linear-fixed.png" alt="" />
+
+</div>
+<h3 id="circular-loadercircular-loader">Circular Loader&lt;&lt;Circular Loader&gt;&gt;</h3>
+<p>Available Attributes: - color: The color of the loader (optional)</p>
+<p>Example:</p>
+<pre class="text"><code>[preloader_circular]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-preload-circular.png" alt="" />
+
+</div>
+<h3 id="flashing-circular-loaderflashing-circular-loader">Flashing Circular Loader&lt;&lt;Flashing Circular Loader&gt;&gt;</h3>
+<p>Available Attributes: - flashing: This needs to be inside the shortcode.</p>
+<p>Example:</p>
+<pre class="text"><code>[preloader_circular flashing]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-preload-circular-flashing.png" alt="" />
+
+</div>
+<h2 id="tables">Tables</h2>
+<p>The table shortcodes are a bit different in that they only <em>wrap</em> existing HTML (or shortcodes).</p>
+<p>You can use any of the table types (striped, hoverable, centered, responsive, bordered) together in the same shortcode.</p>
+<p>Example:</p>
+<pre class="text"><code>[table style=&quot;striped&quot;]
+&lt;thead&gt;
+ &lt;tr&gt;
+   &lt;th data-field=&quot;name&quot;&gt;Item Name&lt;/th&gt;
+   &lt;th data-field=&quot;price&quot;&gt;Item Price&lt;/th&gt;
+ &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Eclair&lt;/td&gt;
+      &lt;td&gt;$0.87&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Jellybean&lt;/td&gt;
+      &lt;td&gt;$3.76&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lollipop&lt;/td&gt;
+      &lt;td&gt;$7.00&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/tbody&gt;
+[/table]</code></pre>
+<h3 id="striped-tablestriped-table">Striped Table&lt;&lt;Striped Table&gt;&gt;</h3>
+<p>Available Attributes: - color: The backgrund color of the table (optional) - text: The text color of the table (optional)</p>
+<div class="figure">
+<img src="screenshots/materializer-table-striped.png" alt="" />
+
+</div>
+<h3 id="hoverable-tablehoverable-table">Hoverable Table&lt;&lt;Hoverable Table&gt;&gt;</h3>
+<p>Available Attributes: - color: The backgrund color of the table (optional) - text: The text color of the table (optional)</p>
+<div class="figure">
+<img src="screenshots/materializer-table-hoverable.png" alt="" />
+
+</div>
+<h3 id="centered-tablecentered-table">Centered Table&lt;&lt;Centered Table&gt;&gt;</h3>
+<p>Available Attributes: - color: The backgrund color of the table (optional) - text: The text color of the table (optional)</p>
+<div class="figure">
+<img src="screenshots/materializer-table-centered.png" alt="" />
+
+</div>
+<h3 id="bordered-tablebordered-table">Bordered Table&lt;&lt;Bordered Table&gt;&gt;</h3>
+<p>Available Attributes: - color: The backgrund color of the table (optional) - text: The text color of the table (optional)</p>
+<div class="figure">
+<img src="screenshots/materializer-table-bordered.png" alt="" />
+
+</div>
+<h3 id="responsive-tableresponsive-table">Responsive Table&lt;&lt;Responsive Table&gt;&gt;</h3>
+<p>Available Attributes: - color: The backgrund color of the table (optional) - text: The text color of the table (optional)</p>
+<div class="figure">
+<img src="screenshots/materializer-table-responsive.png" alt="" />
+
+</div>
+<h2 id="videos">Videos</h2>
+<h3 id="responsive-videoresponsive-video">Responsive Video&lt;&lt;Responsive Video&gt;&gt;</h3>
+<p>Available Attributes: - src: the link to the video - width: the width of the video in px (optional) - height: the height of the video in px (optional) - allowfullscreen: Allow the video to be made fullscreen (no value, just set inside the shortcode) - nocontrols: Remove play, pause, progress controls (no value, just set inside the shortcode) - frameborder: Width of the border around the video (recommended 0, optional)</p>
+<p>Example:</p>
+<pre class="text"><code>[video src=&quot;//www.youtube.com/embed/Q8TXgCzxEnw?rel=0&quot; width=&quot;500px&quot; width=&quot;100%&quot; allowfullscreen]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-video-responsive.png" alt="" />
+
+</div>
+<h3 id="html5-videohtml5-video">HTML5 Video&lt;&lt;HTML5 Video&gt;&gt;</h3>
+<p>Available Attributes: - src: the link to the video - width: the width of the video in px (optional) - height: the height of the video in px (optional) - allowfullscreen: Allow the video to be made fullscreen (no value, just set inside the shortcode) - nocontrols: Remove play, pause, progress controls (no value, just set inside the shortcode) - frameborder: Width of the border around the video (recommended 0, optional)</p>
+<p>Example:</p>
+<pre class="text"><code>[video src=&quot;//www.youtube.com/embed/Q8TXgCzxEnw?rel=0&quot; width=&quot;500px&quot; width=&quot;100%&quot; allowfullscreen]</code></pre>
+<div class="figure">
+<img src="screenshots/materializer-video-html5.png" alt="" />
+
+</div>
+</body>
+</html>
