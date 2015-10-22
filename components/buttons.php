@@ -102,8 +102,8 @@ class Buttons extends MaterializerShortcodes {
     }
 
     function fixedActionButtonAction($atts, $content) {
-        $to =   isset($atts['to'])   ? $atts['to']   : '';
-        $text = isset($atts['text']) ? $atts['text'] : '';
+        $to    = isset($atts['to'])   ? $atts['to']   : '';
+        $text  = isset($atts['text']) ? $atts['text'] : '';
         $color = isset($atts['color']) ? $atts['color'] : '';
 
         $class = $color . " " . $text . "-text";

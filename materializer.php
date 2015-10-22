@@ -12,7 +12,7 @@ Copyright (c) Cody Reichert - 2015
 /* Code starts here */
 
 $pluginName = "Materializer";
-$pluginVer = "0.1.0";
+$pluginVer  = "0.1.0";
 
 /** Load Shortcodes **/
 require_once "shortcodes.php";
@@ -75,9 +75,9 @@ add_shortcode('collapsible',      array('Collapsibles', 'collapsible'));
 add_shortcode('collapsible_item', array('Collapsibles', 'collapsibleItem'));
 
 /** Collections */
-add_shortcode('collection',         array('Collections', 'collection'));
-add_shortcode('collection_item',    array('Collections', 'collectionItem'));
-add_shortcode('collection_link',   array('Collections', 'collectionLink'));
+add_shortcode('collection',      array('Collections', 'collection'));
+add_shortcode('collection_item', array('Collections', 'collectionItem'));
+add_shortcode('collection_link', array('Collections', 'collectionLink'));
 
 /** Dropdowns */
 add_shortcode('dropdown',      array('Dropdowns', 'dropdown'));

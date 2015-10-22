@@ -41,7 +41,7 @@ class Paginations extends MaterializerShortcodes {
     }
 
     public function paginationItem($atts, $content) {
-        $to = !empty($atts['to']) ? $atts['to'] : '#!';
+        $to    = !empty($atts['to']) ? $atts['to'] : '#!';
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
 

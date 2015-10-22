@@ -18,9 +18,9 @@ class Cards extends MaterializerShortcodes {
      * @title_color: Text color of the tile
      */
     public function basicCard($atts, $content) {
-        $title =      isset($atts['title'])       ? $atts['title']       : '';
-        $color =      isset($atts['color'])       ? $atts['color']       : '';
-        $text =       isset($atts['text'])        ? $atts['text']        : '';
+        $title      = isset($atts['title'])       ? $atts['title']       : '';
+        $color      = isset($atts['color'])       ? $atts['color']       : '';
+        $text       = isset($atts['text'])        ? $atts['text']        : '';
         $titleColor = isset($atts['title_color']) ? $atts['title_color'] : '';
 
         $links = parent::get_stripped_shortcodes($content, 'link');
@@ -54,7 +54,7 @@ class Cards extends MaterializerShortcodes {
     }
 
     public function actionLink($atts, $content) {
-        $to =   isset($atts['to'])   ? $atts['to']   : '';
+        $to   = isset($atts['to'])   ? $atts['to']   : '';
         $text = isset($atts['text']) ? $atts['text'] : '';
         ob_start();
         ?>
@@ -87,9 +87,9 @@ class Cards extends MaterializerShortcodes {
      * @size:        small/medium/large
      */
     public function imageCard($atts, $content) {
-        $img =   isset($atts['img'])   ? $atts['img']   : '';
+        $img   = isset($atts['img'])   ? $atts['img']   : '';
         $color = isset($atts['color']) ? $atts['color'] : '';
-        $text =  isset($atts['text'])  ? $atts['text']  : '';
+        $text  = isset($atts['text'])  ? $atts['text']  : '';
 
         $links = parent::get_stripped_shortcodes($content, 'link');
         $stripped_content = parent::strip_shortcode($content, 'link');
@@ -131,13 +131,13 @@ class Cards extends MaterializerShortcodes {
      * @size:        small/medium/large
      */
     public function revealCard($atts, $content) {
-        $title =      isset($atts['title'])       ? $atts['title']       : '';
-        $color =      isset($atts['color'])       ? $atts['color']       : '';
-        $text =       isset($atts['text'])        ? $atts['text']        : '';
-        $img =        isset($atts['img'])         ? $atts['img']         : '';
+        $title      = isset($atts['title'])       ? $atts['title']       : '';
+        $color      = isset($atts['color'])       ? $atts['color']       : '';
+        $text       = isset($atts['text'])        ? $atts['text']        : '';
+        $img        = isset($atts['img'])         ? $atts['img']         : '';
         $titleColor = isset($atts['title_color']) ? $atts['title_color'] : '';
-        $more_icon =  isset($atts['more_icon'])   ? $atts['more_icon']   : '^';
-        $less_icon =  isset($atts['less_icon'])   ? $atts['less_icon']   : 'X';
+        $more_icon  = isset($atts['more_icon'])   ? $atts['more_icon']   : '^';
+        $less_icon  = isset($atts['less_icon'])   ? $atts['less_icon']   : 'X';
 
         $open_content = parent::get_stripped_shortcodes($content, 'card_open');
         $stripped_content = parent::strip_shortcode($content, 'card_open');

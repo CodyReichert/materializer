@@ -56,10 +56,10 @@ class Images extends MaterializerShortcodes {
 
 
     public function imageBox($atts) {
-        $src    = !empty($atts['src']) ? $atts['src'] : '#';
-        $class  = !empty($atts['class']) ? $atts['class'] : '';
-        $width  = !empty($atts['width']) ? $atts['width'] : '';
-        $height = !empty($atts['height']) ? $atts['height'] : '';
+        $src     = !empty($atts['src']) ? $atts['src'] : '#';
+        $class   = !empty($atts['class']) ? $atts['class'] : '';
+        $width   = !empty($atts['width']) ? $atts['width'] : '';
+        $height  = !empty($atts['height']) ? $atts['height'] : '';
         $caption = !empty($atts['caption']) ? $atts['caption'] : '';
 
         ob_start();
