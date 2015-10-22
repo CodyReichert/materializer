@@ -10,7 +10,8 @@
         "clean": "rm -r ./scripts/src/node_modules",
         "deps": "npm install && npm run move",
         "webpack": "node ./scripts/src/node_modules/webpack/bin/webpack --config='./scripts/src/webpack.config.js' --optimize-minimize",
-        "webpack-watch": "node ./scripts/src/node_modules/webpack/bin/webpack --config='./scripts/src/webpack.config.js' --watch"
+        "webpack-watch": "node ./scripts/src/node_modules/webpack/bin/webpack --config='./scripts/src/webpack.config.js' --watch",
+        "build-all": "npm run deps && npm run webpack"
     },
     "private": true,
     "dependencies": {
