@@ -32,6 +32,7 @@ class Collapsibles extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <span class="materializer">
             <ul class="collapsible <?php echo $class; ?>" data-collapsible="<?php echo $type; ?>">
                 <?php if(!empty($collapsible_items)) { ?>
                     <?php foreach($collapsible_items as $item) { ?>
@@ -41,6 +42,7 @@ class Collapsibles extends MaterializerShortcodes {
                     <?php } ?>
                 <?php } ?>
             </ul>
+          </span>
         <?php
         return ob_get_clean();
     }

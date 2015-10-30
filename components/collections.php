@@ -29,6 +29,7 @@ class Collections extends MaterializerShortcodes {
         if($type === "") {
             ob_start();
             ?>
+              <span class="materializer">
                 <ul class="collection <?php echo $class; ?>">
                     <?php
                     if(!empty($collection_items)) {
@@ -38,6 +39,7 @@ class Collections extends MaterializerShortcodes {
                     }
                     ?>
                 </ul>
+              </span>
             <?php
             return ob_get_clean();
         }
@@ -46,6 +48,7 @@ class Collections extends MaterializerShortcodes {
 
             ob_start();
             ?>
+              <span class="materializer">
                 <div class="collection <?php echo $class; ?>">
                     <?php
                     if(!empty($links)) {
@@ -55,6 +58,7 @@ class Collections extends MaterializerShortcodes {
                     }
                     ?>
                 </div>
+              </span>
             <?php
             return ob_get_clean();
         }

@@ -24,9 +24,11 @@ class Tables extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <div class="materializer">
             <table class="<?php echo $class; ?>">
                 <?php echo do_shortcode($content); ?>
             </table>
+          </div>
         <?php
         return ob_get_clean();
 

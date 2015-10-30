@@ -27,6 +27,7 @@ class Dropdowns extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <span class="materializer">
             <a class='dropdown-button btn <?php echo $class; ?>'
                href='<?php echo $to; ?>' data-activates='<?php echo $name; ?>'>
                 <?php echo do_shortcode($stripped_content); ?>
@@ -42,6 +43,7 @@ class Dropdowns extends MaterializerShortcodes {
                     ?>
                 </ul>
             <?php } ?>
+          </span>
         <?php
         return ob_get_clean();
 

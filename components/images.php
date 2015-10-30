@@ -23,10 +23,12 @@ class Images extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <span class="materializer">
             <img class="responsive-img <?php echo $class; ?>"
                  width="<?php echo $width; ?>"
                  height="<?php echo $height; ?>"
                  src="<?php echo $src; ?>" />
+          </span>
         <?php
         return ob_get_clean();
     }
@@ -46,10 +48,12 @@ class Images extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <span class="materializer">
             <img class="responsive-img circle <?php echo $class; ?>"
                  width="<?php echo $width; ?>"
                  height="<?php echo $height; ?>"
                  src="<?php echo $src; ?>" />
+          </span>
         <?php
         return ob_get_clean();
     }
@@ -64,11 +68,13 @@ class Images extends MaterializerShortcodes {
 
         ob_start();
         ?>
-            <img class="materialboxed" <?php echo $class; ?>"
+          <span class="materializer">
+            <img class="materialboxed <?php echo $class; ?>"
                  width="<?php echo $width; ?>"
                  height="<?php echo $height; ?>"
                  data-caption="<?php echo $caption; ?>"
                  src="<?php echo $src; ?>" />
+          </span>
         <?php
         return ob_get_clean();
     }

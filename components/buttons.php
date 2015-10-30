@@ -26,9 +26,11 @@ class Buttons extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <span class="materializer">
             <a href="<?php echo $to; ?>" class="waves-effect waves-light btn <?php echo $class; ?>">
                 <?php echo do_shortcode($content); ?>
             </a>
+          </span>
         <?php
         return ob_get_clean();
     }
@@ -52,10 +54,12 @@ class Buttons extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <span class="materializer">
             <a href="<?php echo $to; ?>" class="waves-effect waves-light btn-floating btn-large
                                                 <?php echo $class; ?>">
                 <?php echo do_shortcode($content); ?>
             </a>
+          </span>
         <?php
         return ob_get_clean();
     }
@@ -81,22 +85,24 @@ class Buttons extends MaterializerShortcodes {
 
         ob_start();
         ?>
-        <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-          <a class="btn-floating btn-large red">
-            <i class="large material-icons">mode_edit</i>
-          </a>
-          <?php if($action_links !== NULL) { ?>
-              <ul>
-                  <?php
-                  foreach($action_links as $link) {
-                      echo '<li>';
-                      echo do_shortcode($link);
-                      echo '</li>';
-                  }
-                  ?>
-              </ul>
-          <?php } ?>
-        </div>
+          <div class="materializer">
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+              <a class="btn-floating btn-large red">
+                <i class="large material-icons">mode_edit</i>
+              </a>
+              <?php if($action_links !== NULL) { ?>
+                  <ul>
+                      <?php
+                      foreach($action_links as $link) {
+                          echo '<li>';
+                          echo do_shortcode($link);
+                          echo '</li>';
+                      }
+                      ?>
+                  </ul>
+              <?php } ?>
+            </div>
+          </div>
         <?php
         return ob_get_clean();
     }
@@ -110,11 +116,13 @@ class Buttons extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <span class="materializer">
             <a class="btn-floating <?php echo $class; ?>" href="<?php echo $to; ?>">
                 <span class="material-icons">
                     <?php echo $content ?>
                 </span>
             </a>
+          </span>
         <?php
         return ob_get_clean();
     }
@@ -137,9 +145,11 @@ class Buttons extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <span class="materializer">
             <a href="<?php echo $to; ?>" class="waves-effect waves-light btn-flat <?php echo $class; ?>">
                 <?php echo do_shortcode($content); ?>
             </a>
+          </span>
         <?php
         return ob_get_clean();
     }
@@ -162,9 +172,11 @@ class Buttons extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <span class="materializer">
             <a href="<?php echo $to; ?>" class="waves-effect waves-light btn-large <?php echo $class; ?>">
                 <?php echo do_shortcode($content); ?>
             </a>
+          </span>
         <?php
         return ob_get_clean();
     }

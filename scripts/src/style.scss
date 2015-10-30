@@ -6,15 +6,24 @@
 $icons-font-path:  "./node_modules/materialize-css/font/material-design-icons/";
 $roboto-font-path: "./node_modules/materialize-css/font/roboto/";
 
-.dropdown-content,
-.fixed-action-btn ul,
-ul.collapsible,
-ul.collection {
-    margin-left: 0px;
-    padding-left: 0px;
-}
+$material-css: "./_materialize";
 
-.fixed-action-btn ul {
-    margin-top: 5px;
-    margin-bottom: 5px;
+
+.materializer {
+
+    @import "./scripts/src/_materialize";
+
+    .dropdown-content
+    , .fixed-action-btn ul
+    , ul.collapsible
+    , ul.collection {
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+
+    .fixed-action-btn ul {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
 }

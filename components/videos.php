@@ -25,13 +25,15 @@ class Videos extends MaterializerShortcodes {
 
         ob_start();
         ?>
-          <div class="video-container <?php echo $nocontrols; ?>">
-              <iframe width="<?php echo $width; ?>"
-                      height="<?php echo $height ?>"
-                      src="<?php echo $src; ?>"
-                      frameborder="<?php echo $frameborder; ?>"
-                      <?php echo $fullscreen; ?>>
-              </iframe>
+          <div class="materializer">
+            <div class="video-container <?php echo $nocontrols; ?>">
+                <iframe width="<?php echo $width; ?>"
+                        height="<?php echo $height ?>"
+                        src="<?php echo $src; ?>"
+                        frameborder="<?php echo $frameborder; ?>"
+                        <?php echo $fullscreen; ?>>
+                </iframe>
+            </div>
           </div>
         <?php
         return ob_get_clean();
@@ -53,12 +55,14 @@ class Videos extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <div class="materializer">
             <video class="responsive-video"
                    height="<?php echo $height ?>"
                    width="<?php echo $width; ?>"
                    <?php echo $nocontrols ?>>
                 <source src="movie.mp4" type="video/mp4">
             </video>
+          </div>
         <?php
         return ob_get_clean();
 

@@ -30,6 +30,7 @@ class Cards extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <div class="materializer">
             <div class="card <?php echo $color . " " . $text . "-text" ; ?>">
                 <div class="card-content">
                     <span class="card-title <?php echo $titleColor . "-text" ?>">
@@ -49,6 +50,7 @@ class Cards extends MaterializerShortcodes {
                     </div>
                 <?php } ?>
             </div>
+          </div>
         <?php
         return ob_get_clean();
     }
@@ -98,24 +100,26 @@ class Cards extends MaterializerShortcodes {
 
         ob_start();
         ?>
-          <div class="card <?php echo $color . " " . $text . "-text" ; ?>">
-              <div class="card-image">
-                  <img src="<?php echo $img; ?>">
-              </div>
-              <div class="card-content">
-                  <p>
-                      <?php echo do_shortcode($stripped_content); ?>
-                  </p>
-              </div>
-              <?php if($action_links !== NULL) { ?>
-                  <div class="card-action">
-                      <?php
-                          foreach($action_links as $link) {
-                              echo do_shortcode($link);
-                          }
-                      ?>
-                  </div>
-              <?php } ?>
+          <div class="materializer">
+            <div class="card <?php echo $color . " " . $text . "-text" ; ?>">
+                <div class="card-image">
+                    <img src="<?php echo $img; ?>">
+                </div>
+                <div class="card-content">
+                    <p>
+                        <?php echo do_shortcode($stripped_content); ?>
+                    </p>
+                </div>
+                <?php if($action_links !== NULL) { ?>
+                    <div class="card-action">
+                        <?php
+                            foreach($action_links as $link) {
+                                echo do_shortcode($link);
+                            }
+                        ?>
+                    </div>
+                <?php } ?>
+            </div>
           </div>
         <?php
         return ob_get_clean();
@@ -144,6 +148,7 @@ class Cards extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <div class="materializer">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="https://simplyrets.com/images/scrot1.png">
@@ -165,7 +170,7 @@ class Cards extends MaterializerShortcodes {
                     <?php echo do_shortcode($open_content[0][0]); ?>
               </div>
             </div>
-
+          </div>
         <?php
         return ob_get_clean();
     }

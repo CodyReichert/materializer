@@ -24,14 +24,16 @@ class Preloaders extends MaterializerShortcodes {
 
         ob_start();
         ?>
-        <div class="progress <?php echo $class; ?>">
-            <?php if($width === "") { ?>
-                    <div class="indeterminate <?php echo $class; ?>"></div>
-            <?php } else { ?>
-                    <div class="determinate <?php echo $class; ?>"
-                         style="width: <?php echo $width; ?>;"></div>
-            <?php } ?>
-        </div>
+          <div class="materializer">
+            <div class="progress <?php echo $class; ?>">
+              <?php if($width === "") { ?>
+                      <div class="indeterminate <?php echo $class; ?>"></div>
+              <?php } else { ?>
+                      <div class="determinate <?php echo $class; ?>"
+                           style="width: <?php echo $width; ?>;"></div>
+              <?php } ?>
+            </div>
+          </div>
         <?php
         return ob_get_clean();
     }
@@ -49,6 +51,7 @@ class Preloaders extends MaterializerShortcodes {
         if(!is_array($atts) || !in_array('flashing', $atts)) {
             ob_start();
             ?>
+              <div class="materializer">
                 <div class="preloader-wrapper big active">
                     <div class="spinner-layer spinner-<?php echo $color; ?>-only">
                       <div class="circle-clipper left">
@@ -60,6 +63,7 @@ class Preloaders extends MaterializerShortcodes {
                       </div>
                     </div>
                 </div>
+              </div>
             <?php
             return ob_get_clean();
 
@@ -67,6 +71,7 @@ class Preloaders extends MaterializerShortcodes {
 
             ob_start();
             ?>
+              <div class="materializer">
                 <div class="preloader-wrapper big active">
                   <div class="spinner-layer spinner-blue">
                     <div class="circle-clipper left">
@@ -108,6 +113,7 @@ class Preloaders extends MaterializerShortcodes {
                     </div>
                   </div>
                 </div>
+              </div>
             <?php
             return ob_get_clean();
         }

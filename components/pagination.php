@@ -27,6 +27,7 @@ class Paginations extends MaterializerShortcodes {
 
         ob_start();
         ?>
+          <span class="materializer">
             <ul class="pagination <?php echo $class; ?>">
                 <?php
                 if(!empty($pag_items)) {
@@ -36,6 +37,7 @@ class Paginations extends MaterializerShortcodes {
                 }
                 ?>
             </ul>
+          </span>
         <?php
         return ob_get_clean();
     }
