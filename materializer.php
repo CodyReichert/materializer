@@ -4,7 +4,7 @@ Plugin Name: Materializer
 Plugin URI: http://codyreichert.github.io/materializer
 Description: The Material Design components for WordPress
 Author: Cody Reichert
-Version: 0.1.0
+Version: 0.2.0
 
 Copyright (c) Cody Reichert - 2015
 */
