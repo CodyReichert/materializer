@@ -15,7 +15,7 @@ class Footers extends MaterializerShortcodes {
      * @textColor:   text color
      * @sticky:       true/false (Default false)
      */
-    public function footer($atts) {
+    public static function footer($atts) {
         ob_start();
         ?>
           <div class="materializer">

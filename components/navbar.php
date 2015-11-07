@@ -16,7 +16,7 @@ class Navigation extends MaterializerShortcodes {
      * @mobile:      true/false (Default false)
      * @fixed:      true/false (Default false)
      */
-    public function navbar($atts) {
+    public static function navbar($atts) {
         ob_start();
         ?>
         <nav>

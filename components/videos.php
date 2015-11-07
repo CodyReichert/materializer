@@ -15,7 +15,7 @@ class Videos extends MaterializerShortcodes {
      * @textColor:   Text color
      * @link:        Link to video
      */
-    public function externalVideo($atts) {
+    public static function externalVideo($atts) {
         $src         = !empty($atts['src'])         ? $atts['src']          : '#!';
         $width       = !empty($atts['width'])       ? $atts['width']        : '';
         $height      = !empty($atts['height'])      ? $atts['height']       : '';
@@ -47,7 +47,7 @@ class Videos extends MaterializerShortcodes {
      * @textColor:   Text color
      * @sources:     Link to local video sources
      */
-    public function localVideo($atts) {
+    public static function localVideo($atts) {
         $src         = !empty($atts['src'])         ? $atts['src']          : '#!';
         $width       = !empty($atts['width'])       ? $atts['width']        : '';
         $height      = !empty($atts['height'])      ? $atts['height']       : '';

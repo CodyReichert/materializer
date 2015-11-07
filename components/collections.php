@@ -14,7 +14,7 @@ class Collections extends MaterializerShortcodes {
      * @color:       background color
      * @textColor:   text color
      */
-    public function collection($atts, $content) {
+    public static function collection($atts, $content) {
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
         $type  = !empty($atts['type'])  ? $atts['type']  : '';
@@ -64,7 +64,7 @@ class Collections extends MaterializerShortcodes {
         }
     }
 
-    public function collectionItem($atts, $content) {
+    public static function collectionItem($atts, $content) {
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
 
@@ -86,7 +86,7 @@ class Collections extends MaterializerShortcodes {
      * @textColor:   text color
      * @active:      a preselected active item
      */
-    public function collectionLink($atts, $content) {
+    public static function collectionLink($atts, $content) {
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
         $to    = !empty($atts['to'])    ? $atts['to']      : '';

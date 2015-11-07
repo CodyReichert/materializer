@@ -18,7 +18,7 @@ class SideNavs extends MaterializerShortcodes {
      * @textColor:   text color
      * @percentage:  a % of the bar to fill (default is indeteriminate, which just keeps moving
      */
-    public function sideNav($atts) {
+    public static function sideNav($atts) {
         ob_start();
         ?>
             <nav>

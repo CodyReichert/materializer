@@ -14,7 +14,7 @@ class Paginations extends MaterializerShortcodes {
      * @color:       background color
      * @textColor:   text color
      */
-    public function pagination($atts, $content) {
+    public static function pagination($atts, $content) {
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
 
@@ -42,7 +42,7 @@ class Paginations extends MaterializerShortcodes {
         return ob_get_clean();
     }
 
-    public function paginationItem($atts, $content) {
+    public static function paginationItem($atts, $content) {
         $to    = !empty($atts['to']) ? $atts['to'] : '#!';
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';

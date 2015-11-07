@@ -17,7 +17,7 @@ class Tabs extends MaterializerShortcodes {
      * @color:       background color
      * @textColor:   text color
      */
-    public function tabsShortcode($atts) {
+    public static function tabsShortcode($atts) {
         ob_start();
         ?>
             <div class="row">

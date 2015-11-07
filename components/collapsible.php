@@ -17,7 +17,7 @@ class Collapsibles extends MaterializerShortcodes {
      * @popout:      default false, optional true
      * @preselected: a preselected option
      */
-    public function collapsible($atts, $content) {
+    public static function collapsible($atts, $content) {
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
         $type  = !empty($atts['type'])  ? $atts['type']  : 'expandable';
@@ -47,7 +47,7 @@ class Collapsibles extends MaterializerShortcodes {
         return ob_get_clean();
     }
 
-    public function collapsibleItem($atts, $content) {
+    public static function collapsibleItem($atts, $content) {
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
         $title = !empty($atts['title']) ? $atts['title'] : '';

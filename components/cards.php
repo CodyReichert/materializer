@@ -17,7 +17,7 @@ class Cards extends MaterializerShortcodes {
      * @size:        Small/medium/large
      * @title_color: Text color of the tile
      */
-    public function basicCard($atts, $content) {
+    public static function basicCard($atts, $content) {
         $title      = isset($atts['title'])       ? $atts['title']       : '';
         $color      = isset($atts['color'])       ? $atts['color']       : '';
         $text       = isset($atts['text'])        ? $atts['text']        : '';
@@ -55,7 +55,7 @@ class Cards extends MaterializerShortcodes {
         return ob_get_clean();
     }
 
-    public function actionLink($atts, $content) {
+    public static function actionLink($atts, $content) {
         $to   = isset($atts['to'])   ? $atts['to']   : '';
         $text = isset($atts['text']) ? $atts['text'] : '';
         ob_start();
@@ -67,7 +67,7 @@ class Cards extends MaterializerShortcodes {
         return ob_get_clean();
     }
 
-    public function cardRevealOpenContent($atts, $content) {
+    public static function cardRevealOpenContent($atts, $content) {
         $text = isset($atts['text']) ? $atts['text'] : '';
 
         ob_start();
@@ -88,7 +88,7 @@ class Cards extends MaterializerShortcodes {
      * @textColor:   text color
      * @size:        small/medium/large
      */
-    public function imageCard($atts, $content) {
+    public static function imageCard($atts, $content) {
         $img   = isset($atts['img'])   ? $atts['img']   : '';
         $color = isset($atts['color']) ? $atts['color'] : '';
         $text  = isset($atts['text'])  ? $atts['text']  : '';
@@ -134,7 +134,7 @@ class Cards extends MaterializerShortcodes {
      * @textColor:   text color
      * @size:        small/medium/large
      */
-    public function revealCard($atts, $content) {
+    public static function revealCard($atts, $content) {
         $title      = isset($atts['title'])       ? $atts['title']       : '';
         $color      = isset($atts['color'])       ? $atts['color']       : '';
         $text       = isset($atts['text'])        ? $atts['text']        : '';

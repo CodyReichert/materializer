@@ -15,7 +15,7 @@ class Images extends MaterializerShortcodes {
      * @textColor:   text color
      * @sticky:       true/false (Default false)
      */
-    public function responsiveImage($atts) {
+    public static function responsiveImage($atts) {
         $src    = !empty($atts['src']) ? $atts['src'] : '#';
         $class  = !empty($atts['class']) ? $atts['class'] : '';
         $width  = !empty($atts['width']) ? $atts['width'] : '';
@@ -40,7 +40,7 @@ class Images extends MaterializerShortcodes {
      * @textColor:   text color
      * @sticky:       true/false (Default false)
      */
-    public function circularImage($atts) {
+    public static function circularImage($atts) {
         $src    = !empty($atts['src']) ? $atts['src'] : '#';
         $class  = !empty($atts['class']) ? $atts['class'] : '';
         $width  = !empty($atts['width']) ? $atts['width'] : '';
@@ -59,7 +59,7 @@ class Images extends MaterializerShortcodes {
     }
 
 
-    public function imageBox($atts) {
+    public static function imageBox($atts) {
         $src     = !empty($atts['src']) ? $atts['src'] : '#';
         $class   = !empty($atts['class']) ? $atts['class'] : '';
         $width   = !empty($atts['width']) ? $atts['width'] : '';

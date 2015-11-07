@@ -15,7 +15,7 @@ class Preloaders extends MaterializerShortcodes {
      * @textColor:   text color
      * @percentage:  a % of the bar to fill (default is indeteriminate, which just keeps moving
      */
-    public function linearPreloader($atts, $content) {
+    public static function linearPreloader($atts, $content) {
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
         $width = !empty($atts['width'])  ? $atts['width']  : '';
@@ -45,7 +45,7 @@ class Preloaders extends MaterializerShortcodes {
      * @textColor:   text color
      * @flashing:    change through all the colors
      */
-    public function circularPreloader($atts) {
+    public static function circularPreloader($atts) {
         $color = !empty($atts['color']) ? $atts['color'] : 'blue';
 
         if(!is_array($atts) || !in_array('flashing', $atts)) {
