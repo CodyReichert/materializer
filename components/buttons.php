@@ -17,7 +17,7 @@ class Buttons extends MaterializerShortcodes {
      * @textColor: text color
      * @disabled:  disabled (default false)
      */
-    public function raisedButton($atts, $content) {
+    public static function raisedButton($atts, $content) {
         $to    = !empty($atts['to'])    ? $atts['to']    : '#';
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
@@ -45,7 +45,7 @@ class Buttons extends MaterializerShortcodes {
      * @textColor: text color
      * @disabled:  disabled (default false)
      */
-    public function floatingButton($atts, $content) {
+    public static function floatingButton($atts, $content) {
         $to    = !empty($atts['to'])    ? $atts['to']    : '#';
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
@@ -73,7 +73,7 @@ class Buttons extends MaterializerShortcodes {
      * @textColor: text color
      * @disabled:  disabled (default false)
      */
-    public function fixedActionButton($atts, $content) {
+    public static function fixedActionButton($atts, $content) {
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
 
@@ -136,7 +136,7 @@ class Buttons extends MaterializerShortcodes {
      * @textColor: text color
      * @disabled:  disabled (default false)
      */
-    public function flatButton($atts, $content) {
+    public static function flatButton($atts, $content) {
         $to    = !empty($atts['to'])    ? $atts['to']    : '#';
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
@@ -163,7 +163,7 @@ class Buttons extends MaterializerShortcodes {
      * @textColor: text color
      * @disabled:  disabled (default false)
      */
-    public function largeButton($atts, $content) {
+    public static function largeButton($atts, $content) {
         $to    = !empty($atts['to'])    ? $atts['to']    : '#';
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';

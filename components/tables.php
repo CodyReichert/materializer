@@ -15,7 +15,7 @@ class Tables extends MaterializerShortcodes {
      * @textColor:   text color
      * @style:       bodered/striped/hoverable/centered/responsive
      */
-    public function basicTable($atts, $content) {
+    public static function basicTable($atts, $content) {
         $style = $atts['style'] ? $atts['style'] : '';
         $text  = $atts['style'] ? $atts['style'] : '';
         $color = $atts['style'] ? $atts['style'] : '';

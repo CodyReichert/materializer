@@ -14,7 +14,7 @@ class Dropdowns extends MaterializerShortcodes {
      * @color:       background color
      * @textColor:   text color
      */
-    public function dropdown($atts, $content) {
+    public static function dropdown($atts, $content) {
         $name  = !empty($atts['name'])    ? $atts['name']  : '#';
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';
@@ -49,7 +49,7 @@ class Dropdowns extends MaterializerShortcodes {
 
     }
 
-    public function dropdownItem($atts, $content) {
+    public static function dropdownItem($atts, $content) {
         $to    = !empty($atts['to'])    ? $atts['to']    : '#';
         $color = !empty($atts['color']) ? $atts['color'] : '';
         $text  = !empty($atts['text'])  ? $atts['text']  : '';

@@ -8,7 +8,7 @@ Copyright (c) Cody Reichert - 2015
 
 class MaterializerShortcodes {
 
-    public function spliceColor($color) {
+    public static function spliceColor($color) {
         return $color;
     }
 
@@ -16,7 +16,7 @@ class MaterializerShortcodes {
      * Parse $content for shortcodes matching $tag, collect them
      * and return them as an array.
      */
-    public function get_stripped_shortcodes($content, $tag) {
+    public static function get_stripped_shortcodes($content, $tag) {
         $pattern = MaterializerShortcodes::single_shortcode_regexp($tag);
         $matches = array();
 
@@ -26,14 +26,14 @@ class MaterializerShortcodes {
 
         preg_match_all("/$pattern/s", $content, $matches);
 
-        return $matches; 
+        return $matches;
     }
 
     /**
      * Parse $content and strip all $tag shortcodes, returning
      * the content with only shortcodes matchin $tag removed.
      */
-    public function strip_shortcode($content, $tag) {
+    public static function strip_shortcode($content, $tag) {
         if(false === strpos($content, $tag)) {
             return $content;
         }
@@ -45,7 +45,7 @@ class MaterializerShortcodes {
     /**
      * Given $tag, return a regexp to match shortcodes with name $tag.
      */
-    public function single_shortcode_regexp($tag) {
+    public static function single_shortcode_regexp($tag) {
         return
                 '\\['
               . '(\\[?)'

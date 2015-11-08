@@ -1,48 +1,110 @@
-Materializer WP
-A set of Material Design Components for WordPress
-
-
+=== Materializer WP ===
 Author: Cody Reichert
-Email: codyreichert@gmail.com
+Contributors: Cody Reichert
+Tags: material design, google, material components, short-code, design, ui, material ui
+Requires at least: 3.0.1
+Tested up to: 4.3.1
+Stable tag: 0.2.0
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
+Materializer is a set of Material Design Components for WordPress. Powered by simple short-codes, Materializer includes everything you need to add Material Design to your site.
 
+== Description ==
+
+= Getting Started =
 
 Thanks for installing! Let me show you around:
 
-Documentation
-- All of the documentation can be found at http://codyreichert.github.io/materializer
-- Or, if you've got the full package - in the docs/ folder of this directory
+**Documentation:**
+
+- All of the documentation can be found at [The documentation page](http://codyreichert.github.io/materializer)
+
+= Quickstart =
+
+Materializer comes with over 25 different Material Design components
+and hundreds of ways to customize them. To get a good idea of how it all
+works, add this short-code to your page after installing the plugin:
 
 
-Code
-- materializer.php, in this directory, is the entry point for the
-  plugin. Everything stems from there.
-- shortcodes.php initializes the MaterializerShortcodes class (from
-  which all of Materializers' shortcodes extend into their class), and
-  requires all of the files in components/.
-- The components/ directory contains a file for each set of shortcodes
-  (eg, buttons.php).
-- The scripts/ directory contains two subdirectories: dist/ and src/
-  - src contains the actual source files (scss and javascript)
-  - dist contains the compile source files (css and js). The compiled
-    files are not obfuscated in any way.  They are just minified to
-    maintain fast page loads. The unminified versions are bundled with
-    the plugin
-  - The static/src directory is setup with npm for dependencies and webpack
-    for development, which also handles the compilation for dist/
+> [card title="A Cool Card!" text="text-darken-3 grey" title_color="blue"]
+>   I am a very simple card. I am good at containing mall bits of
+>   information. I am convenient because I require little markup to use
+>   effectively.
+>   [link text="blue" to="/"]Go Home[/link]
+> [/card]
 
 
-Dependencies
-- Materialize.css is the main framework this is built on. It's license
-  is MIT (which is a GPL-compliant license), so you can feel free to
-  modify and redistribute - but please retain the included copyright
-  notice
+The short-code above gives a material design *card*, of which you can
+control the title, background color, text color, and link color. This
+is just one of many ways you can use and combine short-codes.
 
 
-Support
-- Please use the support method that was included whenever you purchased the plugin.
+= Support and Bugs =
+
+If you have any question, can't get something to work, or notice a bug, please submit it on the
+[Materializer issue tracker](https://github.com/CodyReichert/materializer/issues).
+
+Pull requests to the Github Repo are also welcome!
 
 
-Thank you for installing, have a great ride!
+== Installation ==
 
-- Cody Reichert
+You can install this plugin a couple of different ways:
+
+= Wordpress Plugin Directory =
+
+1. If you usually install plugins via the Wordpress Dashboard 'Add
+Plugins' page, you can just search for 'Materializer' and click
+install!
+
+= Install from the .zip: =
+
+1. Download the `.zip` file
+
+1. In your Wordpress dashboard, go to `Plugins -> Add New`. Choose `Upload a New Plugin` and upload the `.zip` file.
+
+= Manual install from .zip: =
+
+1. Download the `.zip` file and extract it into your sites `wp-content/plugins` directory
+
+1. Be sure to extract it into a directory called `wp-content/plugins/materializer/`.
+
+= Activating =
+
+Once you have the plugin installed via one of the methods above, you
+can go to the Plugins page of your Wordpress site and click `activate`
+on Materializer. Once successfully activated, you're good to go!
+
+
+== Screenshots ==
+
+1. Basic Material Design card component
+
+2. A Material Design 'raised' button.
+
+3. Collapsible/Accoridion component.
+
+4. Dropdown menu (open) component.
+
+5. Circular and Responsive image component.
+
+6. Pagination component.
+
+7. Preloader (circular/flashing) component.
+
+8. Striped table component.
+
+
+== Changelog ==
+
+= 0.2.0 =
+* FIX: Fix CSS namespace issue that created conflicts with other elements and styles on the page.
+
+= 0.1.0 =
+* Initial Release
+
+
+== Documentation ==
+
+View the full documentation on the [Materializer Website](https://codyreichert.github.io/materializer)
