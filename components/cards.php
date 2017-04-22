@@ -151,7 +151,7 @@ class Cards extends MaterializerShortcodes {
           <div class="materializer">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="https://simplyrets.com/images/scrot1.png">
+                    <img src="<?php echo $img; ?>">
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">
