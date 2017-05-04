@@ -9,7 +9,7 @@ easily on any post, page, or custom post type. There over 25 different
 short-codes and components that take care of all the hard work, and
 allow you to turn any blog or website into a Material Design wonderland.
 
-Stable version: 0.2.0
+Stable version: 0.2.1
 
 Getting Started
 ===============
